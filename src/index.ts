@@ -159,35 +159,35 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
     logo: CUSTOM_LOGOS['antv'],
     group: 'Indonesia (Populer)',
     name: 'ANTV',
-    url: 'https://op-group1-swiftservehd-1.dens.tv/s/s07/index.m3u8'
+    url: 'https://op-group1-swiftservesd-1.dens.tv/s/s21/index.m3u8'
   },
   {
     tvgId: 'Indosiar.id',
     logo: CUSTOM_LOGOS['indosiar'],
     group: 'Indonesia (Populer)',
     name: 'Indosiar',
-    url: 'https://op-group1-swiftservehd-1.dens.tv/h/h235/index.m3u8'
+    url: 'https://op-group1-swiftservesd-1.dens.tv/s/s04/index.m3u8'
   },
   {
     tvgId: 'SCTV.id',
     logo: CUSTOM_LOGOS['sctv'],
     group: 'Indonesia (Populer)',
     name: 'SCTV',
-    url: 'https://op-group1-swiftservehd-1.dens.tv/h/h217/index.m3u8'
+    url: 'https://op-group1-swiftservesd-1.dens.tv/s/s03/index.m3u8'
   },
   {
     tvgId: 'tvOne.id',
     logo: CUSTOM_LOGOS['tvone'],
     group: 'Indonesia (Populer)',
     name: 'tvOne',
-    url: 'https://op-group1-swiftservehd-1.dens.tv/h/h224/index.m3u8'
+    url: 'https://op-group1-swiftservesd-1.dens.tv/s/s20/index.m3u8'
   },
   {
-    tvgId: 'NET.id',
-    logo: CUSTOM_LOGOS['nettv'],
+    tvgId: 'MDTV.id',
+    logo: CUSTOM_LOGOS['mdtv'],
     group: 'Indonesia (Populer)',
-    name: 'NET TV',
-    url: 'https://op-group1-swiftservehd-1.dens.tv/h/h223/index.m3u8'
+    name: 'MDTV',
+    url: 'https://op-group1-swiftservesd-1.dens.tv/h/h06/index.m3u8'
   },
   {
     tvgId: 'RTV.id',
@@ -269,7 +269,7 @@ function getCanonicalChannelName(name: string): string {
   if (normalized === 'indosiar') return 'indosiar';
   if (normalized === 'antv') return 'antv';
   if (normalized === 'tvone') return 'tvone';
-  if (normalized === 'net' || normalized === 'nettv' || normalized === 'netdot') return 'nettv';
+  if (normalized === 'net' || normalized === 'nettv' || normalized === 'netdot') return 'mdtv';
   if (normalized === 'cnbc' || normalized === 'cnbcindonesia') return 'cnbc';
   if (normalized === 'cnn' || normalized === 'cnnindonesia') return 'cnn';
   if (normalized === 'rtv' || normalized === 'rajawalitv' || normalized === 'rajawali') return 'rtv';
