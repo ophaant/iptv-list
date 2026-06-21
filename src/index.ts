@@ -9,6 +9,7 @@ interface Channel {
   name: string;
   url: string;
   headers?: { [key: string]: string };
+  drmKey?: string;
 }
 
 const SOURCES = [
@@ -159,28 +160,47 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
     logo: CUSTOM_LOGOS['antv'],
     group: 'Indonesia (Populer)',
     name: 'ANTV',
-    url: 'https://op-group1-swiftservesd-1.dens.tv/s/s21/index.m3u8'
+    url: 'https://d84q7nw4qf3j3.cloudfront.net/out/v1/0a6c6b1534444ab4bd903af8761e6747/index.mpd',
+    headers: {
+      'Referer': 'https://www.visionplus.id/',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36 http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1'
+    },
+    drmKey: '251c384e846841abafa1f7c723d57e66:e45b06a38cd261b74c5160f0912c042f'
   },
   {
     tvgId: 'Indosiar.id',
     logo: CUSTOM_LOGOS['indosiar'],
     group: 'Indonesia (Populer)',
     name: 'Indosiar',
-    url: 'https://op-group1-swiftservesd-1.dens.tv/s/s04/index.m3u8'
+    url: 'https://tvratu.my.id/vid/index.mpd?id=205&type=dash',
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleCoreMedia/537.36'
+    },
+    drmKey: '6a8b65c83036329e7185b9cd8cbdee29:0eb2beb5633f8e35cafab45af3d21de0'
   },
   {
     tvgId: 'SCTV.id',
     logo: CUSTOM_LOGOS['sctv'],
     group: 'Indonesia (Populer)',
     name: 'SCTV',
-    url: 'https://op-group1-swiftservesd-1.dens.tv/s/s03/index.m3u8'
+    url: 'https://d3b0v7fggu5zwm.cloudfront.net/out/v1/9e9aba7068ca4c7f8a73381bef5f8742/index.mpd',
+    headers: {
+      'Referer': 'https://www.visionplus.id/',
+      'User-Agent': 'Mozilla/5.0 (Linux; Android 13; SM-G9980) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36'
+    },
+    drmKey: '93d5b9f9d5d14f15b1ba9582f332d1fc:116e4014a662fef4ea5d7671dd5120d8'
   },
   {
     tvgId: 'tvOne.id',
     logo: CUSTOM_LOGOS['tvone'],
     group: 'Indonesia (Populer)',
     name: 'tvOne',
-    url: 'https://op-group1-swiftservesd-1.dens.tv/s/s20/index.m3u8'
+    url: 'https://d3b0v7fggu5zwm.cloudfront.net/out/v1/f3df48faafaf4198a65b9763140fce30/index.mpd',
+    headers: {
+      'Referer': 'https://www.visionplus.id/',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    },
+    drmKey: 'eab667a8f7f14ff7bf00d790314a10f0:1d6693bc942f036053fc1c3c3b3b5032'
   },
   {
     tvgId: 'MDTV.id',
@@ -636,6 +656,20 @@ async function main() {
 
   for (const group of Object.keys(groupedChannels).sort()) {
     for (const ch of groupedChannels[group]) {
+      // ClearKey DRM tags
+      if (ch.drmKey) {
+        m3uContent += `#KODIPROP:inputstream.adaptive.license_type=clearkey\n`;
+        m3uContent += `#KODIPROP:inputstream.adaptive.license_key=${ch.drmKey}\n`;
+      }
+      // VLC HTTP options
+      if (ch.headers) {
+        if (ch.headers['Referer']) {
+          m3uContent += `#EXTVLCOPT:http-referrer=${ch.headers['Referer']}\n`;
+        }
+        if (ch.headers['User-Agent']) {
+          m3uContent += `#EXTVLCOPT:http-user-agent=${ch.headers['User-Agent']}\n`;
+        }
+      }
       m3uContent += `#EXTINF:-1 tvg-id="${ch.tvgId}" tvg-logo="${ch.logo}" group-title="${ch.group}",${ch.name}\n`;
 
       // Output URL with parameters (TiviMate/OTT Player style) - NO space inside headers
