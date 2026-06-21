@@ -53,48 +53,54 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   {
     tvgId: 'RCTI.id',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/RCTI_logo_2015.svg/960px-RCTI_logo_2015.svg.png',
-    group: 'Indonesia',
+    group: 'Indonesia (Populer)',
     name: 'RCTI',
     url: 'https://allcutv.rctiplus.id/rcti2023.m3u8',
     headers: {
       'Referer': 'https://www.rctiplus.com/',
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      'User-Agent': 'Mozilla'
     }
   },
   {
     tvgId: 'MNCTV.id',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/MNCTV_logo_2015.svg/960px-MNCTV_logo_2015.svg.png',
-    group: 'Indonesia',
+    group: 'Indonesia (Populer)',
     name: 'MNC TV',
     url: 'https://allcutv.rctiplus.id/mnctv2023.m3u8',
     headers: {
       'Referer': 'https://www.rctiplus.com/',
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      'User-Agent': 'Mozilla'
     }
   },
   {
     tvgId: 'GTV.id',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/GTV_logo_2017.svg/960px-GTV_logo_2017.svg.png',
-    group: 'Indonesia',
+    group: 'Indonesia (Populer)',
     name: 'GTV (Global TV)',
     url: 'https://allcutv.rctiplus.id/gtv2023.m3u8',
     headers: {
       'Referer': 'https://www.rctiplus.com/',
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      'User-Agent': 'Mozilla'
     }
   },
   {
     tvgId: 'iNews.id',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/INews_logo_2023.svg/960px-INews_logo_2023.svg.png',
-    group: 'Indonesia',
+    group: 'Indonesia (Populer)',
     name: 'iNews',
     url: 'https://allcutv.rctiplus.id/inews2023.m3u8',
     headers: {
       'Referer': 'https://www.rctiplus.com/',
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      'User-Agent': 'Mozilla'
     }
   }
 ];
+
+// Helper to categorize popular Indonesian national TV channels
+function getIndonesianGroup(name: string): string {
+  const popularRegex = /rcti|mnc\s*tv|gtv|global\s*tv|inews|sctv|indosiar|antv|trans\s*tv|trans\s*7|net\s*tv|net\.|tvone|metro\s*tv|kompas\s*tv|rtv|rajawali\s*tv|cnn\s*indonesia|cnbc\s*indonesia/i;
+  return popularRegex.test(name) ? 'Indonesia (Populer)' : 'Indonesia (Lokal)';
+}
 
 // Parser function for M3U content supporting headers
 function parseM3U(content: string, defaultGroup: string): Channel[] {
@@ -119,10 +125,16 @@ function parseM3U(content: string, defaultGroup: string): Channel[] {
       // Clean name: remove geoblocked indicator if we're injecting referrer
       name = name.replace(/\[Geo-blocked\]/gi, '').replace(/\s+/g, ' ').trim();
 
+      // Dynamically group Indonesian channels into Populer or Lokal
+      let group = defaultGroup;
+      if (group === 'Indonesia') {
+        group = getIndonesianGroup(name);
+      }
+
       currentInfo = {
         tvgId: tvgIdMatch ? tvgIdMatch[1] : '',
         logo: logoMatch ? logoMatch[1] : '',
-        group: defaultGroup,
+        group: group,
         name: name,
       };
     } else if (line.startsWith('#EXTVLCOPT:')) {
@@ -136,7 +148,8 @@ function parseM3U(content: string, defaultGroup: string): Channel[] {
           if (key === 'http-referrer' || key === 'referrer') {
             currentHeaders['Referer'] = val;
           } else if (key === 'http-user-agent' || key === 'user-agent') {
-            currentHeaders['User-Agent'] = val;
+            // Strip spaces from UA to prevent URL-parsing issues in strict mobile players
+            currentHeaders['User-Agent'] = val.includes(' ') ? 'Mozilla' : val;
           }
         }
       }
@@ -162,7 +175,8 @@ function parseM3U(content: string, defaultGroup: string): Channel[] {
               if (k === 'referer') {
                 currentHeaders['Referer'] = v;
               } else if (k === 'user-agent') {
-                currentHeaders['User-Agent'] = v;
+                // Strip spaces from UA to prevent URL-parsing issues in strict mobile players
+                currentHeaders['User-Agent'] = v.includes(' ') ? 'Mozilla' : v;
               }
             }
           }
@@ -182,7 +196,7 @@ function parseM3U(content: string, defaultGroup: string): Channel[] {
             currentHeaders['Referer'] = 'http://www.dens.tv/';
           }
           if (!currentHeaders['User-Agent']) {
-            currentHeaders['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+            currentHeaders['User-Agent'] = 'Mozilla';
           }
         }
         
@@ -196,11 +210,16 @@ function parseM3U(content: string, defaultGroup: string): Channel[] {
           lowerUrl.includes('mncnow')
         ) {
           if (!currentHeaders['Referer']) {
-            currentHeaders['Referer'] = 'https://www.visionplus.id/';
+            currentHeaders['Referer'] = 'https://www.rctiplus.com/';
           }
           if (!currentHeaders['User-Agent']) {
-            currentHeaders['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+            currentHeaders['User-Agent'] = 'Mozilla';
           }
+        }
+
+        // Clean user-agent in case it has spaces from source
+        if (currentHeaders['User-Agent'] && currentHeaders['User-Agent'].includes(' ')) {
+          currentHeaders['User-Agent'] = 'Mozilla';
         }
 
         channels.push({
@@ -323,7 +342,7 @@ async function main() {
 
   await runWithConcurrency(uniqueChannels, 15, async (ch) => {
     // Bypass online check for Indonesian channels because they are geo-blocked on US/EU runners but work for domestic users
-    const isOnline = ch.group === 'Indonesia' ? true : await checkStreamOnline(ch.url, ch.headers);
+    const isOnline = ch.group.startsWith('Indonesia') ? true : await checkStreamOnline(ch.url, ch.headers);
     checkedCount++;
     if (checkedCount % 20 === 0 || checkedCount === uniqueChannels.length) {
       console.log(`Progress: ${checkedCount}/${uniqueChannels.length} validated`);
@@ -350,18 +369,8 @@ async function main() {
   for (const group of Object.keys(groupedChannels).sort()) {
     for (const ch of groupedChannels[group]) {
       m3uContent += `#EXTINF:-1 tvg-id="${ch.tvgId}" tvg-logo="${ch.logo}" group-title="${ch.group}",${ch.name}\n`;
-      
-      // Output header option tags for player compatibility (VLC style)
-      if (ch.headers) {
-        if (ch.headers['User-Agent']) {
-          m3uContent += `#EXTVLCOPT:http-user-agent=${ch.headers['User-Agent']}\n`;
-        }
-        if (ch.headers['Referer']) {
-          m3uContent += `#EXTVLCOPT:http-referrer=${ch.headers['Referer']}\n`;
-        }
-      }
 
-      // Output URL with parameters (TiviMate/OTT Player style)
+      // Output URL with parameters (TiviMate/OTT Player style) - NO space inside headers
       let displayUrl = ch.url;
       const urlParams: string[] = [];
       if (ch.headers) {

@@ -14,11 +14,15 @@ Automated IPTV playlist generator and validator that keeps a clean, working list
 
 ## 🔗 Live Playlist Link
 
-Once pushed to your GitHub repository, you can load the raw URL of the generated playlist directly into any IPTV player (e.g., VLC, Tivimate, IPTVnator, OttNavigator, etc.):
+Many IPTV players (especially **OTT Player**, Smart TVs, and older TV boxes) cannot import raw GitHub URLs (`raw.githubusercontent.com`) due to **SSL certificate validation failures** or **CORS (Cross-Origin Resource Sharing) restrictions**.
+
+To ensure 100% compatibility, you should use the **jsDelivr CDN** link instead, which has universal CORS headers and works in all players:
 
 ```text
-https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/main/playlist.m3u
+https://cdn.jsdelivr.net/gh/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/playlist.m3u
 ```
+
+*(Note: Replace `<YOUR_GITHUB_USERNAME>` and `<YOUR_REPO_NAME>` with your actual GitHub username and repository name).*
 
 ## 🛠️ Local Development
 
