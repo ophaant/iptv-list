@@ -28,6 +28,11 @@ const SOURCES = [
     filter: (ch: Channel) => true,
   },
   {
+    url: 'https://raw.githubusercontent.com/dhasap/dhanytv/main/dhanytv-ott.m3u',
+    groupName: 'Indonesia',
+    filter: (ch: Channel) => true,
+  },
+  {
     url: 'https://iptv-org.github.io/iptv/countries/kr.m3u',
     groupName: 'Korea',
     filter: (ch: Channel) => true,
@@ -49,6 +54,7 @@ const SOURCES = [
 ];
 
 // Curated active MNC channels that are referer-protected but work without Widevine DRM keys
+// Curated active Indonesian channels (MNC channels need referer, others play without headers)
 const CORE_INDONESIA_CHANNELS: Channel[] = [
   {
     tvgId: 'RCTI.id',
@@ -93,8 +99,176 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
       'Referer': 'https://www.rctiplus.com/',
       'User-Agent': 'Mozilla'
     }
+  },
+  {
+    tvgId: 'ANTV.id',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Antv_logo.svg/960px-Antv_logo.svg.png',
+    group: 'Indonesia (Populer)',
+    name: 'ANTV',
+    url: 'https://op-group1-swiftservehd-1.dens.tv/s/s07/index.m3u8'
+  },
+  {
+    tvgId: 'Indosiar.id',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Indosiar_logo_2015.svg/1200px-Indosiar_logo_2015.svg.png',
+    group: 'Indonesia (Populer)',
+    name: 'Indosiar',
+    url: 'https://op-group1-swiftservehd-1.dens.tv/h/h235/index.m3u8'
+  },
+  {
+    tvgId: 'SCTV.id',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/SCTV_Logo.svg/1200px-SCTV_Logo.svg.png',
+    group: 'Indonesia (Populer)',
+    name: 'SCTV',
+    url: 'https://op-group1-swiftservehd-1.dens.tv/h/h217/index.m3u8'
+  },
+  {
+    tvgId: 'tvOne.id',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/TvOne_logo_2013.svg/960px-TvOne_logo_2013.svg.png',
+    group: 'Indonesia (Populer)',
+    name: 'tvOne',
+    url: 'https://op-group1-swiftservehd-1.dens.tv/h/h224/index.m3u8'
+  },
+  {
+    tvgId: 'NET.id',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/NET_logo.svg/960px-NET_logo.svg.png',
+    group: 'Indonesia (Populer)',
+    name: 'NET TV',
+    url: 'https://op-group1-swiftservehd-1.dens.tv/h/h223/index.m3u8'
+  },
+  {
+    tvgId: 'RTV.id',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Rajawali_Televisi_logo_2014.svg/960px-Rajawali_Televisi_logo_2014.svg.png',
+    group: 'Indonesia (Populer)',
+    name: 'RTV',
+    url: 'https://rtvstream.rtv.co.id:4555/hls/rtv.m3u8'
+  },
+  {
+    tvgId: 'TransTV.id',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Trans_TV_2013.svg/960px-Trans_TV_2013.svg.png',
+    group: 'Indonesia (Populer)',
+    name: 'Trans TV',
+    url: 'https://video.detik.com/transtv/smil:transtv.smil/playlist.m3u8'
+  },
+  {
+    tvgId: 'Trans7.id',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Trans7_logo_2013.svg/960px-Trans7_logo_2013.svg.png',
+    group: 'Indonesia (Populer)',
+    name: 'Trans 7',
+    url: 'https://video.detik.com/trans7/smil:trans7.smil/playlist.m3u8'
+  },
+  {
+    tvgId: 'CNBCIndonesia.id',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/CNBC_Indonesia_2025.svg/960px-CNBC_Indonesia_2025.svg.png',
+    group: 'Indonesia (Populer)',
+    name: 'CNBC Indonesia',
+    url: 'https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/playlist.m3u8'
+  },
+  {
+    tvgId: 'CNNIndonesia.id',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/CNN_Indonesia_2023.svg/960px-CNN_Indonesia_2023.svg.png',
+    group: 'Indonesia (Populer)',
+    name: 'CNN Indonesia',
+    url: 'https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8'
   }
 ];
+
+// Helper to skip appending headers for domains that play fine without them (avoiding pipe character for OTT Player)
+function shouldSkipHeadersInUrl(url: string): boolean {
+  const lowerUrl = url.toLowerCase();
+  return (
+    lowerUrl.includes('dens.tv') ||
+    lowerUrl.includes('detik.com') ||
+    lowerUrl.includes('cnbcindonesia.com') ||
+    lowerUrl.includes('cnnindonesia.com') ||
+    lowerUrl.includes('rtv.co.id') ||
+    lowerUrl.includes('rtvstream.rtv.co.id') ||
+    lowerUrl.includes('siar.us') ||
+    lowerUrl.includes('carubantv.id') ||
+    lowerUrl.includes('streamlock.net') ||
+    lowerUrl.includes('medcom.id') ||
+    lowerUrl.includes('metrotvnews.com') ||
+    lowerUrl.includes('210.210.155.') ||
+    lowerUrl.includes('45.126.83.') ||
+    lowerUrl.includes('203.77.246.')
+  );
+}
+
+// Helper to normalize channel names to group duplicates
+function getCanonicalChannelName(name: string): string {
+  let normalized = name.toLowerCase();
+  
+  // Remove common suffixes/prefixes
+  normalized = normalized.replace(/\[geo-blocked\]/gi, '');
+  normalized = normalized.replace(/\b(hd|sd|fhd|uhd|hevc|h\.264|h\.265)\b/gi, '');
+  normalized = normalized.replace(/\b(indonesia|indo|id|stream|streaming|tv|live|backup|cad|digital|720p|1080p|576i)\b/gi, '');
+  normalized = normalized.replace(/\b(ch|channel)\b\s*\d*/gi, '');
+  
+  // Clean whitespace and non-alphanumeric (keep letters/numbers)
+  normalized = normalized.replace(/[^a-z0-9]/g, '');
+  
+  // Map specific variations
+  if (normalized.includes('rcti')) return 'rcti';
+  if (normalized.includes('mnc') || normalized.includes('mnctv')) return 'mnctv';
+  if (normalized.includes('gtv') || normalized.includes('globaltv') || normalized.includes('global')) return 'gtv';
+  if (normalized.includes('inews')) return 'inews';
+  if (normalized.includes('sctv')) return 'sctv';
+  if (normalized.includes('indosiar')) return 'indosiar';
+  if (normalized.includes('antv')) return 'antv';
+  if (normalized.includes('tvone')) return 'tvone';
+  if (normalized.includes('net') || normalized.includes('nettv')) return 'nettv';
+  if (normalized.includes('cnbc')) return 'cnbc';
+  if (normalized.includes('cnn')) return 'cnn';
+  if (normalized.includes('rtv') || normalized.includes('rajawali')) return 'rtv';
+  if (normalized.includes('transtv') || normalized.includes('trans')) {
+    if (normalized.includes('7') || normalized.includes('seven')) {
+      return 'trans7';
+    }
+    return 'transtv';
+  }
+  if (normalized.includes('metro')) return 'metrotv';
+  if (normalized.includes('kompas')) return 'kompastv';
+  
+  return normalized;
+}
+
+// Scoring function to evaluate the quality and stability of streams
+function getStreamScore(ch: Channel): number {
+  let score = 0;
+  const url = ch.url.toLowerCase();
+  const name = ch.name.toLowerCase();
+  
+  // Prefer HTTPS
+  if (url.startsWith('https://')) {
+    score += 10;
+  }
+  
+  // Prefer Dens.tv / Detik / RTV official streams for popular Indonesian channels
+  if (
+    url.includes('op-group1-swiftservehd-1.dens.tv') ||
+    url.includes('video.detik.com') ||
+    url.includes('allcutv.rctiplus.id') ||
+    url.includes('rtvstream.rtv.co.id')
+  ) {
+    score += 50;
+  }
+  
+  // Penalize backup / low quality in the name
+  if (name.includes('backup') || name.includes('cad') || name.includes('low') || name.includes('sd')) {
+    score -= 20;
+  }
+  
+  // Penalize UDP/RTP streams (unstable/special player needed)
+  if (url.includes('/udp/') || url.includes('/rtp/') || url.startsWith('udp://') || url.startsWith('rtp://')) {
+    score -= 100;
+  }
+  
+  // Penalize bad cloudfront nodes (like d1abp075u76pbq which needs DASH/DRM)
+  if (url.includes('d1abp075u76pbq.cloudfront.net')) {
+    score -= 150;
+  }
+  
+  return score;
+}
 
 // Helper to categorize popular Indonesian national TV channels
 function getIndonesianGroup(name: string): string {
@@ -326,13 +500,27 @@ async function main() {
 
   console.log(`Total channels collected for validation: ${allChannels.length}`);
   
-  // De-duplicate channels by URL to avoid redundant checking
-  const uniqueChannelsMap = new Map<string, Channel>();
+  // De-duplicate channels globally by group and canonical name to keep only the single best stream per channel
+  const bestChannelsMap = new Map<string, Channel>();
   for (const ch of allChannels) {
-    uniqueChannelsMap.set(ch.url, ch);
+    const canonicalName = getCanonicalChannelName(ch.name);
+    if (!canonicalName) continue;
+    
+    // De-duplicate Indonesian popular and local together (preferring popular)
+    const globalKey = ch.group.startsWith('Indonesia') ? `Indonesia:${canonicalName}` : `${ch.group}:${canonicalName}`;
+    const existing = bestChannelsMap.get(globalKey);
+    
+    if (!existing) {
+      bestChannelsMap.set(globalKey, ch);
+    } else {
+      if (getStreamScore(ch) > getStreamScore(existing)) {
+        bestChannelsMap.set(globalKey, ch);
+      }
+    }
   }
-  const uniqueChannels = Array.from(uniqueChannelsMap.values());
-  console.log(`Unique channels: ${uniqueChannels.length}`);
+  
+  const uniqueChannels = Array.from(bestChannelsMap.values());
+  console.log(`Deduplicated to ${uniqueChannels.length} candidate channels`);
 
   console.log('Validating streams (this might take a few minutes)...');
   
@@ -373,7 +561,9 @@ async function main() {
       // Output URL with parameters (TiviMate/OTT Player style) - NO space inside headers
       let displayUrl = ch.url;
       const urlParams: string[] = [];
-      if (ch.headers) {
+      
+      // Do not append headers if the URL is clean and doesn't require headers to play
+      if (ch.headers && !shouldSkipHeadersInUrl(ch.url)) {
         if (ch.headers['Referer']) {
           urlParams.push(`Referer=${ch.headers['Referer']}`);
         }
