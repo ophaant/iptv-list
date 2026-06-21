@@ -329,7 +329,12 @@ function getStreamScore(ch: Channel): number {
   let score = 0;
   const url = ch.url.toLowerCase();
   const name = ch.name.toLowerCase();
-  
+
+  // Curated core channels get a massive bonus because they are verified and DRM-configured
+  if (ch.drmKey || CORE_INDONESIA_CHANNELS.some(c => c.url === ch.url)) {
+    score += 500;
+  }
+
   // Prefer HTTPS
   if (url.startsWith('https://')) {
     score += 10;
