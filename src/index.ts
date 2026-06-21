@@ -54,11 +54,65 @@ const SOURCES = [
 ];
 
 // Curated active MNC channels that are referer-protected but work without Widevine DRM keys
+const CUSTOM_LOGOS: { [key: string]: string } = {
+  'sctv': 'https://thumbor.prod.vidiocdn.com/kH-K9J4cROqL0TZrAyQhw7P5pBk=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/204/4e9f5c.png',
+  'indosiar': 'https://thumbor.prod.vidiocdn.com/0plBZ7Gso7gNBJxid9ksA8HMGxc=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/205/54ab19.png',
+  'tvri': 'https://thumbor.prod.vidiocdn.com/F6W__Y0wn_7mFW0cOuz7mi7qjWU=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/6441/528cc9.png',
+  'rcti': 'https://thumbor.prod.vidiocdn.com/9c-sEWp6Du7DoWDn56cjma0gMpY=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/665/337c4d.png',
+  'transtv': 'https://thumbor.prod.vidiocdn.com/__j35q7LPpcS2EgkR7v8GpE4USQ=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/733/ecaa60.png',
+  'tvone': 'https://thumbor.prod.vidiocdn.com/APQ6a9vXvN6lU1zjeyL15IV_AJQ=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/783/07750c.png',
+  'trans7': 'https://thumbor.prod.vidiocdn.com/-MEB2a6J4sB6SvBDimCb7JYP6WY=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/734/131514.png',
+  'moji': 'https://thumbor.prod.vidiocdn.com/g7gTjD2Il1GI4DJULOZ1cv6NSj4=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/206/1823dc.png',
+  'antv': 'https://thumbor.prod.vidiocdn.com/IRVkD3QGRzroJ4IZzXBpS-0MRls=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/782/e1af8b.png',
+  'mnctv': 'https://thumbor.prod.vidiocdn.com/H-nyot3OCOIHY7qtKmguKyIUeBw=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/870/ca65b5.png',
+  'kompastv': 'https://thumbor.prod.vidiocdn.com/Pf8yLSfHEUZeRI9tUzLDR2U8Zow=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/874/042ca3.png',
+  'metrotv': 'https://thumbor.prod.vidiocdn.com/u0aa_S_rQeujrp5eR6LwXdertrI=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/777/ea8483.png',
+  'gtv': 'https://thumbor.prod.vidiocdn.com/6uEQ8IC06gH6XiMTVHtlRr1HAOE=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/778/810229.png',
+  'inews': 'https://thumbor.prod.vidiocdn.com/BmeGg2IWkB_FAVPDviCk8gP8qcw=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/5409/c40666.png',
+  'rtv': 'https://thumbor.prod.vidiocdn.com/cStgoV5oqj2Om_6NMOzK0AFY-sg=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/1561/665aea.png',
+  'mentari': 'https://thumbor.prod.vidiocdn.com/59CZO-IVdps6hUK6gEQqn-w-bCw=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/8237/18585d.png',
+  'mentaritv': 'https://thumbor.prod.vidiocdn.com/59CZO-IVdps6hUK6gEQqn-w-bCw=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/8237/18585d.png',
+  'mdtv': 'https://thumbor.prod.vidiocdn.com/LCZH_yEBnTYEQzrU1pB7w7ev-Bw=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/875/325605.png',
+  'beritasatu': 'https://thumbor.prod.vidiocdn.com/cSyueV9bIgkdLkvVWqIZOlR6TFQ=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/18280/c7fc8f.png',
+  'btv': 'https://thumbor.prod.vidiocdn.com/DoRk_b8tcmbwDHroNxP2-o6QRKU=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/6165/8c950f.png',
+  'garuda': 'https://thumbor.prod.vidiocdn.com/qtIYvE-mjwMPwd-VUxilo2gFiAI=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/18162/b4bea2.png',
+  'garudatv': 'https://thumbor.prod.vidiocdn.com/qtIYvE-mjwMPwd-VUxilo2gFiAI=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/18162/b4bea2.png',
+  'ggstv': 'https://thumbor.prod.vidiocdn.com/mKMJ1J-ffUe8NpZ3ky3Ve5oDzuI=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/18105/25d569.png',
+  'hiphiphoree': 'https://thumbor.prod.vidiocdn.com/EOkH5JDfHzAnCeGKEXiY12G36Qw=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/7052/63032e.png',
+  'nusantara': 'https://thumbor.prod.vidiocdn.com/npPL9VlWMJ5owmeupR7ucPjdGl4=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/7432/bfecbc.png',
+  'nusantaratv': 'https://thumbor.prod.vidiocdn.com/npPL9VlWMJ5owmeupR7ucPjdGl4=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/7432/bfecbc.png',
+  'jtv': 'https://thumbor.prod.vidiocdn.com/RFPy_yTRC9PPPbHGeJlLQgt-RaE=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/9713/a11faf.png',
+  'horee': 'https://thumbor.prod.vidiocdn.com/lfyNbk-BG70u8ahFpO9I0HhV3bM=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/6397/d422cd.png',
+  'sinpo': 'https://thumbor.prod.vidiocdn.com/j6L0yLX8CtZTUnIO5aMzs0tNkvI=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/19046/aaa3fa.png',
+  'sinpotv': 'https://thumbor.prod.vidiocdn.com/j6L0yLX8CtZTUnIO5aMzs0tNkvI=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/19046/aaa3fa.png',
+  'ajwa': 'https://thumbor.prod.vidiocdn.com/GydAc8ocolWIwQ2A_1xFv0iQ3GM=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/7464/e69965.png',
+  'ajwatv': 'https://thumbor.prod.vidiocdn.com/GydAc8ocolWIwQ2A_1xFv0iQ3GM=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/7464/e69965.png',
+  'daai': 'https://thumbor.prod.vidiocdn.com/0r_rhIVANc6dsGvQ76616ZSqF04=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/6482/e83fcf.png',
+  'daaitv': 'https://thumbor.prod.vidiocdn.com/0r_rhIVANc6dsGvQ76616ZSqF04=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/6482/e83fcf.png',
+  'musica': 'https://thumbor.prod.vidiocdn.com/I6siEUUN1ga4mYcu0Ysr9BlHeH4=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/7619/379f71.png',
+  'uchannel': 'https://thumbor.prod.vidiocdn.com/yw_pUKLmZyf5rwqDqh-FvU2llv8=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/6898/7e119a.png',
+  'uchanneltv': 'https://thumbor.prod.vidiocdn.com/yw_pUKLmZyf5rwqDqh-FvU2llv8=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/6898/7e119a.png',
+  'jawapos': 'https://thumbor.prod.vidiocdn.com/yo9zkfT4I-17_keD5cai7XRKEE0=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/9714/5a2fad.jpg',
+  'jawapostv': 'https://thumbor.prod.vidiocdn.com/yo9zkfT4I-17_keD5cai7XRKEE0=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/9714/5a2fad.jpg',
+  'dmi': 'https://thumbor.prod.vidiocdn.com/XudiSJe7FNdZ4dBfDmy-5X0MwZo=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/12607/de1855.png',
+  'dmitv': 'https://thumbor.prod.vidiocdn.com/XudiSJe7FNdZ4dBfDmy-5X0MwZo=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/12607/de1855.png',
+  'elshinta': 'https://thumbor.prod.vidiocdn.com/9Ai_9ibLKhC4czfgMXnw3P-uSyA=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/10975/0dc2d8.png',
+  'elshintatv': 'https://thumbor.prod.vidiocdn.com/9Ai_9ibLKhC4czfgMXnw3P-uSyA=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/10975/0dc2d8.png',
+  'magna': 'https://thumbor.prod.vidiocdn.com/43T_Bt_R_JSQugV3MxoAeYze7OQ=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/7230/7d6bf5.jpg',
+  'magnatv': 'https://thumbor.prod.vidiocdn.com/43T_Bt_R_JSQugV3MxoAeYze7OQ=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/7230/7d6bf5.jpg',
+  'jak': 'https://thumbor.prod.vidiocdn.com/lJ0VbXBqgieZcVnLJ-Beck84Idk=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/5415/802b76.png',
+  'jaktv': 'https://thumbor.prod.vidiocdn.com/lJ0VbXBqgieZcVnLJ-Beck84Idk=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/5415/802b76.png',
+  'citra': 'https://thumbor.prod.vidiocdn.com/-8PUJArasi4xed1VWjzmbdSkVWg=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/21179/13c032.png',
+  'citradrama': 'https://thumbor.prod.vidiocdn.com/-8PUJArasi4xed1VWjzmbdSkVWg=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/21179/13c032.png',
+  'cnbc': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/CNBC_Indonesia_2025.svg/960px-CNBC_Indonesia_2025.svg.png',
+  'cnn': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/CNN_Indonesia_2023.svg/960px-CNN_Indonesia_2023.svg.png'
+};
+
 // Curated active Indonesian channels (MNC channels need referer, others play without headers)
 const CORE_INDONESIA_CHANNELS: Channel[] = [
   {
     tvgId: 'RCTI.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/RCTI_logo_2015.svg/960px-RCTI_logo_2015.svg.png',
+    logo: CUSTOM_LOGOS['rcti'],
     group: 'Indonesia (Populer)',
     name: 'RCTI',
     url: 'https://allcutv.rctiplus.id/rcti2023.m3u8',
@@ -69,7 +123,7 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   },
   {
     tvgId: 'MNCTV.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/MNCTV_logo_2015.svg/960px-MNCTV_logo_2015.svg.png',
+    logo: CUSTOM_LOGOS['mnctv'],
     group: 'Indonesia (Populer)',
     name: 'MNC TV',
     url: 'https://allcutv.rctiplus.id/mnctv2023.m3u8',
@@ -80,7 +134,7 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   },
   {
     tvgId: 'GTV.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/GTV_logo_2017.svg/960px-GTV_logo_2017.svg.png',
+    logo: CUSTOM_LOGOS['gtv'],
     group: 'Indonesia (Populer)',
     name: 'GTV (Global TV)',
     url: 'https://allcutv.rctiplus.id/gtv2023.m3u8',
@@ -91,7 +145,7 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   },
   {
     tvgId: 'iNews.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/INews_logo_2023.svg/960px-INews_logo_2023.svg.png',
+    logo: CUSTOM_LOGOS['inews'],
     group: 'Indonesia (Populer)',
     name: 'iNews',
     url: 'https://allcutv.rctiplus.id/inews2023.m3u8',
@@ -102,70 +156,70 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   },
   {
     tvgId: 'ANTV.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Antv_logo.svg/960px-Antv_logo.svg.png',
+    logo: CUSTOM_LOGOS['antv'],
     group: 'Indonesia (Populer)',
     name: 'ANTV',
     url: 'https://op-group1-swiftservehd-1.dens.tv/s/s07/index.m3u8'
   },
   {
     tvgId: 'Indosiar.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Indosiar_logo_2015.svg/1200px-Indosiar_logo_2015.svg.png',
+    logo: CUSTOM_LOGOS['indosiar'],
     group: 'Indonesia (Populer)',
     name: 'Indosiar',
     url: 'https://op-group1-swiftservehd-1.dens.tv/h/h235/index.m3u8'
   },
   {
     tvgId: 'SCTV.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/SCTV_Logo.svg/1200px-SCTV_Logo.svg.png',
+    logo: CUSTOM_LOGOS['sctv'],
     group: 'Indonesia (Populer)',
     name: 'SCTV',
     url: 'https://op-group1-swiftservehd-1.dens.tv/h/h217/index.m3u8'
   },
   {
     tvgId: 'tvOne.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/TvOne_logo_2013.svg/960px-TvOne_logo_2013.svg.png',
+    logo: CUSTOM_LOGOS['tvone'],
     group: 'Indonesia (Populer)',
     name: 'tvOne',
     url: 'https://op-group1-swiftservehd-1.dens.tv/h/h224/index.m3u8'
   },
   {
     tvgId: 'NET.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/NET_logo.svg/960px-NET_logo.svg.png',
+    logo: CUSTOM_LOGOS['nettv'],
     group: 'Indonesia (Populer)',
     name: 'NET TV',
     url: 'https://op-group1-swiftservehd-1.dens.tv/h/h223/index.m3u8'
   },
   {
     tvgId: 'RTV.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Rajawali_Televisi_logo_2014.svg/960px-Rajawali_Televisi_logo_2014.svg.png',
+    logo: CUSTOM_LOGOS['rtv'],
     group: 'Indonesia (Populer)',
     name: 'RTV',
     url: 'https://rtvstream.rtv.co.id:4555/hls/rtv.m3u8'
   },
   {
     tvgId: 'TransTV.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Trans_TV_2013.svg/960px-Trans_TV_2013.svg.png',
+    logo: CUSTOM_LOGOS['transtv'],
     group: 'Indonesia (Populer)',
     name: 'Trans TV',
     url: 'https://video.detik.com/transtv/smil:transtv.smil/playlist.m3u8'
   },
   {
     tvgId: 'Trans7.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Trans7_logo_2013.svg/960px-Trans7_logo_2013.svg.png',
+    logo: CUSTOM_LOGOS['trans7'],
     group: 'Indonesia (Populer)',
     name: 'Trans 7',
     url: 'https://video.detik.com/trans7/smil:trans7.smil/playlist.m3u8'
   },
   {
     tvgId: 'CNBCIndonesia.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/CNBC_Indonesia_2025.svg/960px-CNBC_Indonesia_2025.svg.png',
+    logo: CUSTOM_LOGOS['cnbc'],
     group: 'Indonesia (Populer)',
     name: 'CNBC Indonesia',
     url: 'https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/playlist.m3u8'
   },
   {
     tvgId: 'CNNIndonesia.id',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/CNN_Indonesia_2023.svg/960px-CNN_Indonesia_2023.svg.png',
+    logo: CUSTOM_LOGOS['cnn'],
     group: 'Indonesia (Populer)',
     name: 'CNN Indonesia',
     url: 'https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8'
@@ -206,27 +260,46 @@ function getCanonicalChannelName(name: string): string {
   // Clean whitespace and non-alphanumeric (keep letters/numbers)
   normalized = normalized.replace(/[^a-z0-9]/g, '');
   
-  // Map specific variations
-  if (normalized.includes('rcti')) return 'rcti';
-  if (normalized.includes('mnc') || normalized.includes('mnctv')) return 'mnctv';
-  if (normalized.includes('gtv') || normalized.includes('globaltv') || normalized.includes('global')) return 'gtv';
-  if (normalized.includes('inews')) return 'inews';
-  if (normalized.includes('sctv')) return 'sctv';
-  if (normalized.includes('indosiar')) return 'indosiar';
-  if (normalized.includes('antv')) return 'antv';
-  if (normalized.includes('tvone')) return 'tvone';
-  if (normalized.includes('net') || normalized.includes('nettv')) return 'nettv';
-  if (normalized.includes('cnbc')) return 'cnbc';
-  if (normalized.includes('cnn')) return 'cnn';
-  if (normalized.includes('rtv') || normalized.includes('rajawali')) return 'rtv';
-  if (normalized.includes('transtv') || normalized.includes('trans')) {
-    if (normalized.includes('7') || normalized.includes('seven')) {
-      return 'trans7';
-    }
-    return 'transtv';
-  }
-  if (normalized.includes('metro')) return 'metrotv';
-  if (normalized.includes('kompas')) return 'kompastv';
+  // Map specific variations strictly
+  if (normalized === 'rcti') return 'rcti';
+  if (normalized === 'mnc' || normalized === 'mnctv') return 'mnctv';
+  if (normalized === 'gtv' || normalized === 'globaltv' || normalized === 'global') return 'gtv';
+  if (normalized === 'inews') return 'inews';
+  if (normalized === 'sctv') return 'sctv';
+  if (normalized === 'indosiar') return 'indosiar';
+  if (normalized === 'antv') return 'antv';
+  if (normalized === 'tvone') return 'tvone';
+  if (normalized === 'net' || normalized === 'nettv' || normalized === 'netdot') return 'nettv';
+  if (normalized === 'cnbc' || normalized === 'cnbcindonesia') return 'cnbc';
+  if (normalized === 'cnn' || normalized === 'cnnindonesia') return 'cnn';
+  if (normalized === 'rtv' || normalized === 'rajawalitv' || normalized === 'rajawali') return 'rtv';
+  if (normalized === 'transtv' || normalized === 'trans') return 'transtv';
+  if (normalized === 'trans7') return 'trans7';
+  if (normalized === 'metrotv' || normalized === 'metro') return 'metrotv';
+  if (normalized === 'kompastv' || normalized === 'kompas') return 'kompastv';
+  if (normalized === 'moji') return 'moji';
+  if (normalized === 'tvri') return 'tvri';
+  if (normalized === 'mentari' || normalized === 'mentaritv') return 'mentaritv';
+  if (normalized === 'mdtv' || normalized === 'md') return 'mdtv';
+  if (normalized === 'beritasatu') return 'beritasatu';
+  if (normalized === 'btv') return 'btv';
+  if (normalized === 'garuda' || normalized === 'garudatv') return 'garudatv';
+  if (normalized === 'ggs' || normalized === 'ggstv') return 'ggstv';
+  if (normalized === 'hiphiphoree') return 'hiphiphoree';
+  if (normalized === 'nusantara' || normalized === 'nusantaratv') return 'nusantaratv';
+  if (normalized === 'jtv') return 'jtv';
+  if (normalized === 'horee') return 'horee';
+  if (normalized === 'sinpo' || normalized === 'sinpotv') return 'sinpotv';
+  if (normalized === 'ajwa' || normalized === 'ajwatv') return 'ajwatv';
+  if (normalized === 'daai' || normalized === 'daaitv') return 'daaitv';
+  if (normalized === 'musica') return 'musica';
+  if (normalized === 'uchannel' || normalized === 'uchanneltv') return 'uchanneltv';
+  if (normalized === 'jawapos' || normalized === 'jawapostv') return 'jawapostv';
+  if (normalized === 'dmi' || normalized === 'dmitv') return 'dmitv';
+  if (normalized === 'elshinta' || normalized === 'elshintatv') return 'elshintatv';
+  if (normalized === 'magna' || normalized === 'magnatv') return 'magnatv';
+  if (normalized === 'jak' || normalized === 'jaktv') return 'jaktv';
+  if (normalized === 'citra' || normalized === 'citradrama') return 'citradrama';
   
   return normalized;
 }
@@ -396,9 +469,16 @@ function parseM3U(content: string, defaultGroup: string): Channel[] {
           currentHeaders['User-Agent'] = 'Mozilla';
         }
 
+        // Apply custom logo override if available
+        let logo = currentInfo.logo || '';
+        const canonical = getCanonicalChannelName(currentInfo.name || '');
+        if (CUSTOM_LOGOS[canonical]) {
+          logo = CUSTOM_LOGOS[canonical];
+        }
+
         channels.push({
           tvgId: currentInfo.tvgId || '',
-          logo: currentInfo.logo || '',
+          logo: logo,
           group: currentInfo.group || defaultGroup,
           name: currentInfo.name || 'Unknown Channel',
           url: streamUrl,
