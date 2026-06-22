@@ -119,7 +119,12 @@ const CUSTOM_LOGOS: { [key: string]: string } = {
   'championstv2': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/champions2.jpg?raw=true',
   'championstv5': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/champions5.jpg?raw=true',
   'championstv6': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/champions6.jpg?raw=true',
-  'tvrisport': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/tvrisport.jpg?raw=true'
+  'tvrisport': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/tvrisport.jpg?raw=true',
+  'beinsportsxtra': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
+  'beinsportsxtraespanol': 'https://i.imgur.com/V562tpO.png',
+  'espn8theocho': 'https://images.fubo.tv/channel-config-ui/station-logos/on-dark/espn_8_the_ocho_bw.png',
+  'tracesportstars': 'https://i.imgur.com/FabFP5A.png',
+  'mojiproliga': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Moji_blue.svg/1024px-Moji_blue.svg.png'
 };
 
 // Curated active Indonesian channels (MNC channels need referer, others play without headers)
@@ -432,6 +437,45 @@ const CORE_SPORTS_CHANNELS: Channel[] = [
     group: 'Olahraga',
     name: 'Moji Sports',
     url: 'https://aspaltvpasti.top/Drmvidbos/Akun121/bosstv.m3u8?id=206'
+  },
+  {
+    tvgId: 'beINSportsXTRA.us',
+    logo: CUSTOM_LOGOS['beinsportsxtra'],
+    group: 'Olahraga',
+    name: 'beIN Sports XTRA',
+    url: 'https://bein-xtra-bein.amagi.tv/playlist.m3u8'
+  },
+  {
+    tvgId: 'beINSportsXTRAespanol.us',
+    logo: CUSTOM_LOGOS['beinsportsxtraespanol'],
+    group: 'Olahraga',
+    name: 'beIN Sports XTRA Español',
+    url: 'https://dc1644a9jazgj.cloudfront.net/beIN_Sports_Xtra_Espanol.m3u8'
+  },
+  {
+    tvgId: 'ESPN8TheOcho.us',
+    logo: CUSTOM_LOGOS['espn8theocho'],
+    group: 'Olahraga',
+    name: 'ESPN8 The Ocho',
+    url: 'https://d3b6q2ou5kp8ke.cloudfront.net/ESPNTheOcho.m3u8'
+  },
+  {
+    tvgId: 'TraceSportStars.fr',
+    logo: CUSTOM_LOGOS['tracesportstars'],
+    group: 'Olahraga',
+    name: 'Trace Sport Stars',
+    url: 'https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8'
+  },
+  {
+    tvgId: 'MojiProLiga.id',
+    logo: CUSTOM_LOGOS['mojiproliga'],
+    group: 'Olahraga',
+    name: 'MOJI Pro Liga',
+    url: 'http://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8',
+    headers: {
+      'Referer': 'https://www.dens.tv/',
+      'User-Agent': 'Mozilla'
+    }
   }
 ];
 
@@ -526,6 +570,11 @@ function getCanonicalChannelName(name: string): string {
   if (normalized === 'sctvsports') return 'sctvsports';
   if (normalized === 'indosiarsports') return 'indosiarsports';
   if (normalized === 'mojisports') return 'mojisports';
+  if (normalized === 'beinsportsxtra') return 'beinsportsxtra';
+  if (normalized === 'beinsportsxtraespanol' || normalized === 'beinsportsxtraenespanol') return 'beinsportsxtraespanol';
+  if (normalized === 'espn8theocho' || normalized === 'espn8') return 'espn8theocho';
+  if (normalized === 'tracesportstars' || normalized === 'tracesport') return 'tracesportstars';
+  if (normalized === 'mojiproliga') return 'mojiproliga';
   
   return normalized;
 }
