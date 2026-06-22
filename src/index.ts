@@ -106,7 +106,11 @@ const CUSTOM_LOGOS: { [key: string]: string } = {
   'citra': 'https://thumbor.prod.vidiocdn.com/-8PUJArasi4xed1VWjzmbdSkVWg=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/21179/13c032.png',
   'citradrama': 'https://thumbor.prod.vidiocdn.com/-8PUJArasi4xed1VWjzmbdSkVWg=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/21179/13c032.png',
   'cnbc': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/CNBC_Indonesia_2025.svg/960px-CNBC_Indonesia_2025.svg.png',
-  'cnn': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/CNN_Indonesia_2023.svg/960px-CNN_Indonesia_2023.svg.png'
+  'cnn': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/CNN_Indonesia_2023.svg/960px-CNN_Indonesia_2023.svg.png',
+  'kbsworld': 'https://upload.wikimedia.org/wikipedia/commons/e/e0/KBS_World_2018.png',
+  'tvn': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/TvN_Logo.svg/512px-TvN_Logo.svg.png',
+  'tvnmovies': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/TvN_Movies_logo.svg/512px-TvN_Movies_logo.svg.png',
+  'sbs': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/SBS_Logo_2018.svg/512px-SBS_Logo_2018.svg.png'
 };
 
 // Curated active Indonesian channels (MNC channels need referer, others play without headers)
@@ -160,12 +164,7 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
     logo: CUSTOM_LOGOS['antv'],
     group: 'Indonesia (Populer)',
     name: 'ANTV',
-    url: 'https://d84q7nw4qf3j3.cloudfront.net/out/v1/0a6c6b1534444ab4bd903af8761e6747/index.mpd',
-    headers: {
-      'Referer': 'https://www.visionplus.id/',
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36 http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1'
-    },
-    drmKey: '251c384e846841abafa1f7c723d57e66:e45b06a38cd261b74c5160f0912c042f'
+    url: 'https://aspaltvpasti.top/Drmvidbos/Akun121/bosstv.m3u8?id=782'
   },
   {
     tvgId: 'Indosiar.id',
@@ -243,6 +242,52 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
     group: 'Indonesia (Populer)',
     name: 'CNN Indonesia',
     url: 'https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8'
+  },
+  {
+    tvgId: 'Moji.id',
+    logo: CUSTOM_LOGOS['moji'],
+    group: 'Indonesia (Populer)',
+    name: 'Moji',
+    url: 'https://aspaltvpasti.top/Drmvidbos/Akun121/bosstv.m3u8?id=206'
+  },
+  {
+    tvgId: 'KBSWorld.kr',
+    logo: CUSTOM_LOGOS['kbsworld'],
+    group: 'Korea',
+    name: 'KBS World',
+    url: 'https://kbsworld-ott.akamaized.net/hls/live/2002341/kbsworld/master.m3u8',
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    }
+  },
+  {
+    tvgId: 'tvN.kr',
+    logo: CUSTOM_LOGOS['tvn'],
+    group: 'Korea',
+    name: 'tvN Asia',
+    url: 'https://op-group1-swiftservehd-1.dens.tv/h/h20/index.m3u8',
+    headers: {
+      'Referer': 'http://www.dens.tv/',
+      'User-Agent': 'Mozilla'
+    }
+  },
+  {
+    tvgId: 'tvNMovies.kr',
+    logo: CUSTOM_LOGOS['tvnmovies'],
+    group: 'Korea',
+    name: 'tvN Movies Asia',
+    url: 'https://op-group1-swiftservehd-1.dens.tv/h/h214/index.m3u8',
+    headers: {
+      'Referer': 'http://www.dens.tv/',
+      'User-Agent': 'Mozilla'
+    }
+  },
+  {
+    tvgId: 'SBS.kr',
+    logo: CUSTOM_LOGOS['sbs'],
+    group: 'Korea',
+    name: 'SBS',
+    url: 'https://streaming-a-802.cdn.nextologies.com/SBS_Live_HD/live/SBS_Live_HD_1500k/chunks.m3u8'
   }
 ];
 
@@ -320,6 +365,10 @@ function getCanonicalChannelName(name: string): string {
   if (normalized === 'magna' || normalized === 'magnatv') return 'magnatv';
   if (normalized === 'jak' || normalized === 'jaktv') return 'jaktv';
   if (normalized === 'citra' || normalized === 'citradrama') return 'citradrama';
+  if (normalized === 'kbsworld' || normalized === 'kbs') return 'kbsworld';
+  if (normalized === 'tvn' || normalized === 'tvnasia') return 'tvn';
+  if (normalized === 'tvnmovies' || normalized === 'tvnmovie') return 'tvnmovies';
+  if (normalized === 'sbs') return 'sbs';
   
   return normalized;
 }
@@ -634,8 +683,8 @@ async function main() {
   let checkedCount = 0;
 
   await runWithConcurrency(uniqueChannels, 15, async (ch) => {
-    // Bypass online check for Indonesian channels because they are geo-blocked on US/EU runners but work for domestic users
-    const isOnline = ch.group.startsWith('Indonesia') ? true : await checkStreamOnline(ch.url, ch.headers);
+    // Bypass online check for Indonesian and Korean channels because they are geo-blocked on US/EU runners but work for domestic users
+    const isOnline = (ch.group.startsWith('Indonesia') || ch.group === 'Korea') ? true : await checkStreamOnline(ch.url, ch.headers);
     checkedCount++;
     if (checkedCount % 20 === 0 || checkedCount === uniqueChannels.length) {
       console.log(`Progress: ${checkedCount}/${uniqueChannels.length} validated`);
