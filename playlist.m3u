@@ -1,30 +1,30 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="AnimeZoneTV.do@SD" tvg-logo="https://i.imgur.com/AHaXlCh.png" group-title="Anime",Anime Zone TV (480p)
-http://animezonetv.net/hls/stream.m3u8
 #EXTINF:-1 tvg-id="AnimexHIDIVE.us@SD" tvg-logo="https://i.imgur.com/v0BlxCa.png" group-title="Anime",ANIME x HIDIVE (720p)
 https://d3f088nnrrvkwf.cloudfront.net/v1/amc_anime_x_hidive_1/samsungheadend_us/latest/main/hls/playlist.m3u8
 #EXTINF:-1 tvg-id="FilmRiseAnime.us@SD" tvg-logo="https://i.imgur.com/3wqeGXM.png" group-title="Anime",FilmRise Anime (720p)
 https://dvu7aia8rjlfm.cloudfront.net/master.m3u8
+#EXTINF:-1 tvg-id="AnimeZoneTV.do@SD" tvg-logo="https://i.imgur.com/AHaXlCh.png" group-title="Anime",Anime Zone TV (480p)
+http://animezonetv.net/hls/stream.m3u8
 #EXTINF:-1 tvg-id="MrBeanAnimated.uk@IT" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/25/Mr._Bean_Animated_Series_stacked_logo.png" group-title="Anime",Mr. Bean Anime Italy (1080p)
 https://amg00627-amg00627c29-rakuten-it-3989.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanitcc-rakutenit/playlist.m3u8
 #EXTINF:-1 tvg-id="MrBeanAnimated.uk@ES" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/25/Mr._Bean_Animated_Series_stacked_logo.png" group-title="Anime",Mr. Bean Anime Spain (1080p)
 https://amg00627-amg00627c30-rakuten-es-3990.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanescc-rakutenes/playlist.m3u8
-#EXTINF:-1 tvg-id="MAXAnime.ve@SD" tvg-logo="https://i.imgur.com/Oj3hEBh.jpg" group-title="Anime",MAX Anime (1080p)
-https://cdnlive.klicgo.net/maxanime/live/playlist.m3u8
 #EXTINF:-1 tvg-id="PlutoTVAnimeAcao.us@BR" tvg-logo="https://images.pluto.tv/channels/604b79c558393100078faeef/colorLogoPNG.png" group-title="Anime",Pluto TV Anime Ação
 https://jmp2.uk/plu-604b79c558393100078faeef.m3u8
+#EXTINF:-1 tvg-id="PlutoTVAnime.de@DACH" tvg-logo="https://images.pluto.tv/channels/608181d420fc8500075f612a/colorLogoPNG_1747395463053.png" group-title="Anime",Pluto TV Anime
+https://jmp2.uk/plu-608181d420fc8500075f612a.m3u8
+#EXTINF:-1 tvg-id="MAXAnime.ve@SD" tvg-logo="https://i.imgur.com/Oj3hEBh.jpg" group-title="Anime",MAX Anime (1080p)
+https://cdnlive.klicgo.net/maxanime/live/playlist.m3u8
 #EXTINF:-1 tvg-id="Naruto.us@Brazil" tvg-logo="https://i.imgur.com/M8X3Kvc.png" group-title="Anime",Naruto
 https://jmp2.uk/plu-5f6df5a173d7340007c559f7.m3u8
 #EXTINF:-1 tvg-id="NarutoShippuden.us@LatAm" tvg-logo="https://images.pluto.tv/channels/64c92fea3c3344000869e8a9/colorLogoPNG.png" group-title="Anime",Naruto Shippuden
 https://jmp2.uk/plu-64c92f965580090008084968.m3u8
-#EXTINF:-1 tvg-id="PlutoTVAnime.de@DACH" tvg-logo="https://images.pluto.tv/channels/608181d420fc8500075f612a/colorLogoPNG_1747395463053.png" group-title="Anime",Pluto TV Anime
-https://jmp2.uk/plu-608181d420fc8500075f612a.m3u8
+#EXTINF:-1 tvg-id="OnePiece.us@BR" tvg-logo="https://i.imgur.com/XsvbAWR.png" group-title="Anime",One Piece
+https://jmp2.uk/plu-624b1c8d4321e200073ee421.m3u8
 #EXTINF:-1 tvg-id="Crunchyroll.us@SD" tvg-logo="https://i.imgur.com/2FlIQUO.png" group-title="Anime",Crunchyroll (720p)
 https://jmp2.uk/plu-65652f7fc0fc88000883537a.m3u8
 #EXTINF:-1 tvg-id="PlutoTVAnimeMovies.us@SD" tvg-logo="https://images.pluto.tv/channels/67ed8f7e443f0671bc2b2368/colorLogoPNG.png" group-title="Anime",Pluto TV Anime Movies
 https://jmp2.uk/plu-67ed8f7e443f0671bc2b2368.m3u8
-#EXTINF:-1 tvg-id="OnePiece.us@BR" tvg-logo="https://i.imgur.com/XsvbAWR.png" group-title="Anime",One Piece
-https://jmp2.uk/plu-624b1c8d4321e200073ee421.m3u8
 #EXTINF:-1 tvg-id="TVRINasional.id" tvg-logo="https://github.com/riotryulianto/iptv-playlists/blob/main/icons/tvri.png?raw=true" group-title="Indonesia (Lokal)",TVRI Nasional
 https://ott-balancer.tvri.go.id/live/eds/Nasional/hls/Nasional.m3u8
 #EXTVLCOPT:http-referrer=http://www.dens.tv/
@@ -699,9 +699,9 @@ https://indihuy.streamized.net/atm/DASH/sinpotv/manifest.mpd|Referer=maxstream.t
 #EXTVLCOPT:http-referrer=maxstream.tv/tv-channels
 #EXTINF:-1 tvg-id="SindoNewsTV.id@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/SindoNewsTV_2023.png/960px-SindoNewsTV_2023.png" group-title="Indonesia (Lokal)",Sindo News TV
 https://indihuy.streamized.net/atm/DASH/mncnews/manifest.mpd|Referer=maxstream.tv/tv-channels
-#EXTINF:-1 tvg-id="SPOTV.id@SD" tvg-logo="https://i.imgur.com/HaoVsm5.png" group-title="Indonesia (Lokal)",SPOTV (720p)
+#EXTINF:-1 tvg-id="SPOTV.id@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2f/SPOTV_logo.svg" group-title="Indonesia (Lokal)",SPOTV (720p)
 http://primestreams.tv:826/live/mookie22/49aV7nBsK4/119515.m3u8
-#EXTINF:-1 tvg-id="SPOTV2.id@SD" tvg-logo="https://i.imgur.com/YD8fbTH.png" group-title="Indonesia (Lokal)",SPOTV 2 (1080p)
+#EXTINF:-1 tvg-id="SPOTV2.id@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2f/SPOTV_logo.svg" group-title="Indonesia (Lokal)",SPOTV 2 (1080p)
 http://primestreams.tv:826/live/mookie22/49aV7nBsK4/119516.m3u8
 #EXTINF:-1 tvg-id="SriwijayaTV.id@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/id/7/75/SriwijayaTV_2014.png" group-title="Indonesia (Lokal)",Sriwijaya TV (576p) [Not 24/7]
 https://sriwijayatv.siar.us/live/sriwijayatv.m3u8
@@ -1005,23 +1005,23 @@ http://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8
 http://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8
 #EXTINF:-1 tvg-id="SMTV.id@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/id/6/6e/Logo_SMTV_Sumedang.png" group-title="Indonesia (Lokal)",SMTV (720p) [Not 24/7]
 http://122.248.43.242:1935/SMTV/_definst_/myStream/playlist.m3u8
-#EXTINF:-1 tvg-id="auto.bein.sports.1" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS 1
+#EXTINF:-1 tvg-id="auto.bein.sports.1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Indonesia (Lokal)",bEIN SPORTS 1
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/100
-#EXTINF:-1 tvg-id="auto.bein.sports.2" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS 2
+#EXTINF:-1 tvg-id="auto.bein.sports.2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Indonesia (Lokal)",bEIN SPORTS 2
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/101
-#EXTINF:-1 tvg-id="auto.bein.sports.3" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS 3
+#EXTINF:-1 tvg-id="auto.bein.sports.3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Indonesia (Lokal)",bEIN SPORTS 3
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/102
-#EXTINF:-1 tvg-id="auto.bein.sports.4" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS 4
+#EXTINF:-1 tvg-id="auto.bein.sports.4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Indonesia (Lokal)",bEIN SPORTS 4
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/103
-#EXTINF:-1 tvg-id="auto.bein.sports.5" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS 5
+#EXTINF:-1 tvg-id="auto.bein.sports.5" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Indonesia (Lokal)",bEIN SPORTS 5
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/104
-#EXTINF:-1 tvg-id="auto.bein.sports.6" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS 6
+#EXTINF:-1 tvg-id="auto.bein.sports.6" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Indonesia (Lokal)",bEIN SPORTS 6
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/105
-#EXTINF:-1 tvg-id="auto.bein.sports.7" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS 7
+#EXTINF:-1 tvg-id="auto.bein.sports.7" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Indonesia (Lokal)",bEIN SPORTS 7
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/106
-#EXTINF:-1 tvg-id="auto.bein.sports.8" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS 8
+#EXTINF:-1 tvg-id="auto.bein.sports.8" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Indonesia (Lokal)",bEIN SPORTS 8
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/107
-#EXTINF:-1 tvg-id="auto.bein.sports.9" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS 9
+#EXTINF:-1 tvg-id="auto.bein.sports.9" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Indonesia (Lokal)",bEIN SPORTS 9
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/108
 #EXTINF:-1 tvg-id="auto.bein.sports.eng.1" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS ENG 1
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/110
@@ -1029,11 +1029,11 @@ https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/110
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/111
 #EXTINF:-1 tvg-id="auto.bein.sports.eng.3" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS ENG 3
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/267769
-#EXTINF:-1 tvg-id="auto.bein.sports.global" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS GLOBAL
+#EXTINF:-1 tvg-id="auto.bein.sports.global" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Indonesia (Lokal)",bEIN SPORTS GLOBAL
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/16779
-#EXTINF:-1 tvg-id="auto.bein.sports.max.1" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS MAX 1
+#EXTINF:-1 tvg-id="auto.bein.sports.max.1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Indonesia (Lokal)",bEIN SPORTS MAX 1
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/296991
-#EXTINF:-1 tvg-id="auto.bein.sports.max.2" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS MAX 2
+#EXTINF:-1 tvg-id="auto.bein.sports.max.2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Indonesia (Lokal)",bEIN SPORTS MAX 2
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/199001
 #EXTINF:-1 tvg-id="auto.bein.sports.new" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS NEW
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/1266
@@ -1051,26 +1051,6 @@ https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/299259
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/144
 #EXTINF:-1 tvg-id="auto.bein.sports.fr.2" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",bEIN SPORTS FR 2
 https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/145
-#EXTINF:-1 tvg-id="auto.fr.bein.sports.3" tvg-logo="" group-title="Indonesia (Lokal)",FR: beIN Sports 3
-https://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/146
-#EXTINF:-1 tvg-id="auto.bein.sports.1.arab.uk" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",beIN Sports 1 ARAB (UK)
-https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/510908
-#EXTINF:-1 tvg-id="auto.bein.sports.2.arab.uk" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",beIN Sports 2 ARAB (UK)
-https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/510909
-#EXTINF:-1 tvg-id="auto.bein.sports.3.arab.uk" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",beIN Sports 3 ARAB (UK)
-https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/510910
-#EXTINF:-1 tvg-id="auto.bein.sports.4.arab.uk" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",beIN Sports 4 ARAB (UK)
-https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/510911
-#EXTINF:-1 tvg-id="auto.bein.sports.5.arab.uk" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",beIN Sports 5 ARAB (UK)
-https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/510912
-#EXTINF:-1 tvg-id="auto.bein.sports.6.arab.uk" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",beIN Sports 6 ARAB (UK)
-https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/510913
-#EXTINF:-1 tvg-id="auto.bein.sports.7.arab.uk" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",beIN Sports 7 ARAB (UK)
-https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/510914
-#EXTINF:-1 tvg-id="auto.bein.sports.8.arab.uk" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",beIN Sports 8 ARAB (UK)
-https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/510915
-#EXTINF:-1 tvg-id="auto.bein.sports.9.arab.uk" tvg-logo="https://i.ibb.co.com/Rk12P1KG/20260110-065741.jpg" group-title="Indonesia (Lokal)",beIN Sports 9 ARAB (UK)
-https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/510916
 #EXTINF:-1 tvg-id="auto.alwan.sport.1" tvg-logo="https://i.ibb.co.com/xtKbcvyx/Screenshot-2026-0110-071335.png" group-title="Indonesia (Lokal)",Alwan Sport 1 HD
 https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/1641618
 #EXTINF:-1 tvg-id="auto.alwan.sport.2" tvg-logo="https://i.ibb.co.com/xtKbcvyx/Screenshot-2026-0110-071335.png" group-title="Indonesia (Lokal)",Alwan Sport 2 HD
@@ -1097,18 +1077,16 @@ https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/1641616
 https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/1641615
 #EXTINF:-1 tvg-id="auto.alwan.wwe.fhd" tvg-logo="https://i.ibb.co.com/xtKbcvyx/Screenshot-2026-0110-071335.png" group-title="Indonesia (Lokal)",Alwan WWE FHD
 https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/1641617
-#EXTINF:-1 tvg-id="auto.hub.premier.1.server.1" tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/qoerty1659622111.png" group-title="Indonesia (Lokal)",HUB PREMIER 1 (Server 1)
+#EXTINF:-1 tvg-id="auto.hub.premier.1.server.1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png" group-title="Indonesia (Lokal)",HUB PREMIER 1 (Server 1)
 https://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148158
-#EXTINF:-1 tvg-id="auto.hub.premier.3" tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/znzwou1659622086.png" group-title="Indonesia (Lokal)",HUB PREMIER 3
+#EXTINF:-1 tvg-id="auto.hub.premier.3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png" group-title="Indonesia (Lokal)",HUB PREMIER 3
 https://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148160
-#EXTINF:-1 tvg-id="auto.hub.premier.4" tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/emwu7x1659622075.png" group-title="Indonesia (Lokal)",HUB PREMIER 4
+#EXTINF:-1 tvg-id="auto.hub.premier.4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png" group-title="Indonesia (Lokal)",HUB PREMIER 4
 https://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148161
-#EXTINF:-1 tvg-id="auto.hub.premier.5" tvg-logo="https://i.imgur.com/XhX3oUI.png" group-title="Indonesia (Lokal)",HUB PREMIER 5
+#EXTINF:-1 tvg-id="auto.hub.premier.5" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png" group-title="Indonesia (Lokal)",HUB PREMIER 5
 https://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148162
 #EXTINF:-1 tvg-id="auto.hub.premier.7" tvg-logo="https://i.imgur.com/bVOyKEV.png" group-title="Indonesia (Lokal)",HUB PREMIER 7
 https://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148164
-#EXTINF:-1 tvg-id="auto.hub.premier.11" tvg-logo="https://epg.pw/+media/images/epg/2025/02/12/20250212042824169600_35.png" group-title="Indonesia (Lokal)",HUB PREMIER 11
-https://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148168
 #EXTINF:-1 tvg-id="auto.hub.sports.1" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/singapore/hub-sports-1-sg.png?raw=true" group-title="Indonesia (Lokal)",Hub Sports 1
 https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/280827
 #EXTINF:-1 tvg-id="auto.hub.sports.2" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/singapore/hub-sports-2-sg.png?raw=true" group-title="Indonesia (Lokal)",Hub Sports 2
@@ -1133,9 +1111,9 @@ https://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs22
 https://sinalprivado.info:80/live/632035/GqGcFV4ntu/22002.ts
 #EXTINF:-1 tvg-id="auto.espn.vivo.2" tvg-logo="https://i.imgur.com/JofXHRI.jpg" group-title="Indonesia (Lokal)",ESPN VIVO 2
 https://sinalprivado.info:80/live/632035/GqGcFV4ntu/22005.ts
-#EXTINF:-1 tvg-id="auto.espn.3" tvg-logo="https://i.imgur.com/ADc4YF5.jpg" group-title="Indonesia (Lokal)",ESPN 3
+#EXTINF:-1 tvg-id="auto.espn.3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" group-title="Indonesia (Lokal)",ESPN 3
 https://46.151.196.223:14444/
-#EXTINF:-1 tvg-id="auto.espn.4" tvg-logo="https://i.imgur.com/oikIPP5.jpg" group-title="Indonesia (Lokal)",ESPN 4
+#EXTINF:-1 tvg-id="auto.espn.4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" group-title="Indonesia (Lokal)",ESPN 4
 https://sinalprivado.info:80/live/632035/GqGcFV4ntu/22011.ts
 #EXTINF:-1 tvg-id="auto.espn.5" tvg-logo="https://i.imgur.com/jD0bDM0.jpg" group-title="Indonesia (Lokal)",ESPN 5
 https://sinalprivado.info:80/live/632035/GqGcFV4ntu/22014.ts
@@ -2537,6 +2515,80 @@ https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla
 #EXTINF:-1 tvg-id="MojiProLiga.id" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Moji_blue.svg/1024px-Moji_blue.svg.png" group-title="Olahraga",MOJI Pro Liga
 http://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8
+#EXTINF:-1 tvg-id="SpoTV.kr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2f/SPOTV_logo.svg" group-title="Olahraga",SPOTV 1
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/165105
+#EXTINF:-1 tvg-id="SpoTV2.kr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2f/SPOTV_logo.svg" group-title="Olahraga",SPOTV 2
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/298506
+#EXTINF:-1 tvg-id="beINSports1.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports 1
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/100
+#EXTINF:-1 tvg-id="beINSports2.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports 2
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/101
+#EXTINF:-1 tvg-id="beINSports3.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports 3
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/102
+#EXTINF:-1 tvg-id="beINSports4.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports 4
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/103
+#EXTINF:-1 tvg-id="beINSports5.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports 5
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/104
+#EXTINF:-1 tvg-id="beINSports6.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports 6
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/105
+#EXTINF:-1 tvg-id="beINSports7.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports 7
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/106
+#EXTINF:-1 tvg-id="beINSports8.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports 8
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/107
+#EXTINF:-1 tvg-id="beINSports9.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports 9
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/108
+#EXTINF:-1 tvg-id="beINSportsPremium1.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports Premium 1
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/109
+#EXTINF:-1 tvg-id="beINSportsPremium2.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports Premium 2
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/280145
+#EXTINF:-1 tvg-id="beINSportsPremium3.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports Premium 3
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/280249
+#EXTINF:-1 tvg-id="beINSportsEnglish1.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports English 1
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/110
+#EXTINF:-1 tvg-id="beINSportsEnglish2.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports English 2
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/111
+#EXTINF:-1 tvg-id="beINSportsMax1.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports Max 1
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/296991
+#EXTINF:-1 tvg-id="beINSportsMax2.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports Max 2
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/199001
+#EXTINF:-1 tvg-id="beINSportsMax3.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports Max 3
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/296992
+#EXTINF:-1 tvg-id="beINSportsMax4.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports Max 4
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/13813
+#EXTINF:-1 tvg-id="beINSportsGlobal.fr" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png" group-title="Olahraga",beIN Sports Global
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/16779
+#EXTINF:-1 tvg-id="DAZNLaLiga1.es" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/LaLiga_logo.svg/512px-LaLiga_logo.svg.png" group-title="Olahraga",DAZN LaLiga 1
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/297787
+#EXTINF:-1 tvg-id="DAZNLaLiga2.es" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/LaLiga_logo.svg/512px-LaLiga_logo.svg.png" group-title="Olahraga",DAZN LaLiga 2
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/298745
+#EXTINF:-1 tvg-id="MovistarLaLiga.es" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/LaLiga_logo.svg/512px-LaLiga_logo.svg.png" group-title="Olahraga",Movistar LaLiga
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/1141
+#EXTINF:-1 tvg-id="SuperSportLaLiga.za" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/LaLiga_logo.svg/512px-LaLiga_logo.svg.png" group-title="Olahraga",SuperSport LaLiga
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/194358
+#EXTINF:-1 tvg-id="HubPremier1.sg" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png" group-title="Olahraga",Hub Premier 1
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/305270
+#EXTINF:-1 tvg-id="HubPremier2.sg" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png" group-title="Olahraga",Hub Premier 2
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/305271
+#EXTINF:-1 tvg-id="HubPremier3.sg" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png" group-title="Olahraga",Hub Premier 3
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/305272
+#EXTINF:-1 tvg-id="HubPremier4.sg" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png" group-title="Olahraga",Hub Premier 4
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/305273
+#EXTINF:-1 tvg-id="HubPremier5.sg" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png" group-title="Olahraga",Hub Premier 5
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/305274
+#EXTINF:-1 tvg-id="SkySportsPremierLeague.uk" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Sky_Sports_Logo.svg/512px-Sky_Sports_Logo.svg.png" group-title="Olahraga",Sky Sports Premier League
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/263
+#EXTINF:-1 tvg-id="SkySportSerieA.it" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Sky_Sports_Logo.svg/512px-Sky_Sports_Logo.svg.png" group-title="Olahraga",Sky Sport Serie A
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/2546
+#EXTINF:-1 tvg-id="SkySportBundesliga.de" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Sky_Sports_Logo.svg/512px-Sky_Sports_Logo.svg.png" group-title="Olahraga",Sky Sport Bundesliga
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/2431
+#EXTINF:-1 tvg-id="ESPNPremium.nl" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" group-title="Olahraga",ESPN NL Premium
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/298158
+#EXTINF:-1 tvg-id="ESPN2.nl" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" group-title="Olahraga",ESPN 2 NL
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/35326
+#EXTINF:-1 tvg-id="ESPN3.nl" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" group-title="Olahraga",ESPN 3 NL
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/61170
+#EXTINF:-1 tvg-id="ESPN4.nl" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" group-title="Olahraga",ESPN 4 NL
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/299345
 #EXTINF:-1 tvg-id="30AGolfKingdom.us@SD" tvg-logo="https://i.imgur.com/Lv53nh4.png" group-title="Olahraga",30A Golf Kingdom (720p)
 https://30a-tv.com/feeds/vidaa/golf.m3u8
 #EXTINF:-1 tvg-id="Sport.sk@SD" tvg-logo="https://i.imgur.com/oAtcxNZ.png" group-title="Olahraga",:Šport (1080p)
@@ -3158,10 +3210,6 @@ https://stm.sinalmycn.com/19025/video.m3u8
 https://stm.sinalmycn.com/21006/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
 #EXTINF:-1 tvg-id="SporTVAlternativo.br@SD" tvg-logo="https://i.imgur.com/8M5dLEb.png" group-title="Olahraga",SporTV Alternativo (720p)
 https://stm.sinalmycn.com/19024/video.m3u8
-#EXTINF:-1 tvg-id="SPOTV.id@SD" tvg-logo="https://i.imgur.com/HaoVsm5.png" group-title="Olahraga",SPOTV (720p)
-http://primestreams.tv:826/live/mookie22/49aV7nBsK4/119515.m3u8
-#EXTINF:-1 tvg-id="SPOTV2.id@SD" tvg-logo="https://i.imgur.com/YD8fbTH.png" group-title="Olahraga",SPOTV 2 (1080p)
-http://primestreams.tv:826/live/mookie22/49aV7nBsK4/119516.m3u8
 #EXTINF:-1 tvg-id="SqalaTV.pe@SD" tvg-logo="https://i.imgur.com/DJ05m8s.png" group-title="Olahraga",Sqala TV (720p)
 https://live-evg8.tv360.bitel.com.pe/bitel/studiotvhuanta/playlist.m3u8
 #EXTINF:-1 tvg-id="Stadium.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Stadium_%28sports_network%29_logo.svg/960px-Stadium_%28sports_network%29_logo.svg.png" group-title="Olahraga",Stadium (720p)
