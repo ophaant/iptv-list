@@ -110,7 +110,16 @@ const CUSTOM_LOGOS: { [key: string]: string } = {
   'kbsworld': 'https://upload.wikimedia.org/wikipedia/commons/e/e0/KBS_World_2018.png',
   'tvn': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/TvN_Logo.svg/512px-TvN_Logo.svg.png',
   'tvnmovies': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/TvN_Movies_logo.svg/512px-TvN_Movies_logo.svg.png',
-  'sbs': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/SBS_Logo_2018.svg/512px-SBS_Logo_2018.svg.png'
+  'sbs': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/SBS_Logo_2018.svg/512px-SBS_Logo_2018.svg.png',
+  'sportstars1': 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Sportstars.png',
+  'sportstars2': 'https://upload.wikimedia.org/wikipedia/commons/d/d7/Sportstars_2.png',
+  'sportstars3': 'https://upload.wikimedia.org/wikipedia/commons/a/a3/Sportstars_3.png',
+  'sportstars4': 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png',
+  'championstv1': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/champions1.jpg?raw=true',
+  'championstv2': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/champions2.jpg?raw=true',
+  'championstv5': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/champions5.jpg?raw=true',
+  'championstv6': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/champions6.jpg?raw=true',
+  'tvrisport': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/tvrisport.jpg?raw=true'
 };
 
 // Curated active Indonesian channels (MNC channels need referer, others play without headers)
@@ -255,21 +264,19 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
     logo: CUSTOM_LOGOS['kbsworld'],
     group: 'Korea',
     name: 'KBS World',
-    url: 'https://kbsworld-ott.akamaized.net/hls/live/2002341/kbsworld/master.m3u8',
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-    }
+    url: 'https://cdn4.skygo.mn/live/disk1/KBSWorld/HLSv3-FTA/KBSWorld.m3u8'
   },
   {
     tvgId: 'tvN.kr',
     logo: CUSTOM_LOGOS['tvn'],
     group: 'Korea',
     name: 'tvN Asia',
-    url: 'https://op-group1-swiftservehd-1.dens.tv/h/h20/index.m3u8',
+    url: 'https://fta1-cdn-flr.visionplus.id/out/v1/6dc5412d26ea4e65961c825d866f2a34/index.mpd',
     headers: {
-      'Referer': 'http://www.dens.tv/',
+      'Referer': 'https://www.visionplus.id/',
       'User-Agent': 'Mozilla'
-    }
+    },
+    drmKey: '2e8cbd6f664b4ace966d3edfad94c18e:cff33777777f7e61078ae2ae41ed0636'
   },
   {
     tvgId: 'tvNMovies.kr',
@@ -287,7 +294,144 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
     logo: CUSTOM_LOGOS['sbs'],
     group: 'Korea',
     name: 'SBS',
-    url: 'https://streaming-a-802.cdn.nextologies.com/SBS_Live_HD/live/SBS_Live_HD_1500k/chunks.m3u8'
+    url: 'http://123.140.197.22/stream/1/play.m3u8'
+  },
+  {
+    tvgId: 'KPlus.kr',
+    logo: 'https://images.indihometv.com/images/channels/image_ch_kplus.png',
+    group: 'Korea',
+    name: 'K-Plus',
+    url: 'https://cdn10jtedge.indihometv.com/atm/DASH/kplus/manifest.mpd',
+    headers: {
+      'Referer': 'https://www.indihometv.com/',
+      'User-Agent': 'Mozilla'
+    }
+  }
+];
+
+const CORE_SPORTS_CHANNELS: Channel[] = [
+  {
+    tvgId: 'Sportstars.id',
+    logo: CUSTOM_LOGOS['sportstars1'],
+    group: 'Olahraga',
+    name: 'Sportstars 1',
+    url: 'https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/index.mpd',
+    headers: {
+      'Referer': 'https://www.visionplus.id/',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    },
+    drmKey: '39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea'
+  },
+  {
+    tvgId: 'Sportstars2.id',
+    logo: CUSTOM_LOGOS['sportstars2'],
+    group: 'Olahraga',
+    name: 'Sportstars 2',
+    url: 'https://d3b0v7fggu5zwm.cloudfront.net/out/v1/d2c68a3dfb644808b416bd90dcc92d5f/index.mpd',
+    headers: {
+      'Referer': 'https://www.visionplus.id/',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    },
+    drmKey: '911e72adf36946afbdbb4f80782a8394:08aec548a851ba64b7172ae7f05cb91c'
+  },
+  {
+    tvgId: 'Sportstars3.id',
+    logo: CUSTOM_LOGOS['sportstars3'],
+    group: 'Olahraga',
+    name: 'Sportstars 3',
+    url: 'https://d84q7nw4qf3j3.cloudfront.net/out/v1/eb98aca0a1be41f7b9c05dac051a250e/index.mpd',
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    },
+    drmKey: 'ed1723eb360145ccafa1b466130186da:c7c4171e98de14c23be427f6ab16ef72'
+  },
+  {
+    tvgId: 'Sportstars4.id',
+    logo: CUSTOM_LOGOS['sportstars4'],
+    group: 'Olahraga',
+    name: 'Sportstars 4',
+    url: 'https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd',
+    headers: {
+      'Referer': 'https://www.visionplus.id/',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    },
+    drmKey: 'b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95'
+  },
+  {
+    tvgId: 'TVRINasional.id',
+    logo: CUSTOM_LOGOS['tvri'],
+    group: 'Olahraga',
+    name: 'TVRI (Piala Dunia 2026)',
+    url: 'https://ott-balancer.tvri.go.id/live/eds/Nasional/hls/Nasional.m3u8',
+    headers: {
+      'Referer': 'https://tvri.go.id/',
+      'User-Agent': 'Mozilla'
+    }
+  },
+  {
+    tvgId: 'TVRISport.id',
+    logo: CUSTOM_LOGOS['tvrisport'],
+    group: 'Olahraga',
+    name: 'TVRI Sport',
+    url: 'http://103.179.182.117:6768/hls/49/49.m3u8'
+  },
+  {
+    tvgId: 'ChampionsTV1.id',
+    logo: CUSTOM_LOGOS['championstv1'],
+    group: 'Olahraga',
+    name: 'Champions TV 1',
+    url: 'http://103.179.182.117:6768/hls/66/66.m3u8'
+  },
+  {
+    tvgId: 'ChampionsTV2.id',
+    logo: CUSTOM_LOGOS['championstv2'],
+    group: 'Olahraga',
+    name: 'Champions TV 2',
+    url: 'http://103.179.182.117:6768/hls/88/88.m3u8'
+  },
+  {
+    tvgId: 'ChampionsTV5.id',
+    logo: CUSTOM_LOGOS['championstv5'],
+    group: 'Olahraga',
+    name: 'Champions TV 5',
+    url: 'http://103.179.182.117:6768/hls/21/21.m3u8'
+  },
+  {
+    tvgId: 'ChampionsTV6.id',
+    logo: CUSTOM_LOGOS['championstv6'],
+    group: 'Olahraga',
+    name: 'Champions TV 6',
+    url: 'http://103.179.182.117:6768/hls/94/94.m3u8'
+  },
+  {
+    tvgId: 'SCTV.id',
+    logo: CUSTOM_LOGOS['sctv'],
+    group: 'Olahraga',
+    name: 'SCTV Sports',
+    url: 'https://d3b0v7fggu5zwm.cloudfront.net/out/v1/9e9aba7068ca4c7f8a73381bef5f8742/index.mpd',
+    headers: {
+      'Referer': 'https://www.visionplus.id/',
+      'User-Agent': 'Mozilla/5.0 (Linux; Android 13; SM-G9980) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36'
+    },
+    drmKey: '93d5b9f9d5d14f15b1ba9582f332d1fc:116e4014a662fef4ea5d7671dd5120d8'
+  },
+  {
+    tvgId: 'Indosiar.id',
+    logo: CUSTOM_LOGOS['indosiar'],
+    group: 'Olahraga',
+    name: 'Indosiar Sports',
+    url: 'https://tvratu.my.id/vid/index.mpd?id=205&type=dash',
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleCoreMedia/537.36'
+    },
+    drmKey: '6a8b65c83036329e7185b9cd8cbdee29:0eb2beb5633f8e35cafab45af3d21de0'
+  },
+  {
+    tvgId: 'Moji.id',
+    logo: CUSTOM_LOGOS['moji'],
+    group: 'Olahraga',
+    name: 'Moji Sports',
+    url: 'https://aspaltvpasti.top/Drmvidbos/Akun121/bosstv.m3u8?id=206'
   }
 ];
 
@@ -369,6 +513,19 @@ function getCanonicalChannelName(name: string): string {
   if (normalized === 'tvn' || normalized === 'tvnasia') return 'tvn';
   if (normalized === 'tvnmovies' || normalized === 'tvnmovie') return 'tvnmovies';
   if (normalized === 'sbs') return 'sbs';
+  if (normalized === 'kplus') return 'kplus';
+  if (normalized === 'sportstars1' || normalized === 'sportstars') return 'sportstars1';
+  if (normalized === 'sportstars2') return 'sportstars2';
+  if (normalized === 'sportstars3') return 'sportstars3';
+  if (normalized === 'sportstars4') return 'sportstars4';
+  if (normalized === 'championstv1' || normalized === 'champions1' || normalized === 'champion1') return 'championstv1';
+  if (normalized === 'championstv2' || normalized === 'champions2' || normalized === 'champion2') return 'championstv2';
+  if (normalized === 'championstv5' || normalized === 'champions5' || normalized === 'champion5') return 'championstv5';
+  if (normalized === 'championstv6' || normalized === 'champions6' || normalized === 'champion6') return 'championstv6';
+  if (normalized === 'tvrisport' || normalized === 'tvrisports') return 'tvrisport';
+  if (normalized === 'sctvsports') return 'sctvsports';
+  if (normalized === 'indosiarsports') return 'indosiarsports';
+  if (normalized === 'mojisports') return 'mojisports';
   
   return normalized;
 }
@@ -538,6 +695,16 @@ function parseM3U(content: string, defaultGroup: string): Channel[] {
           }
         }
 
+        // IndiHomeTV auto-inject
+        if (lowerUrl.includes('indihometv.com')) {
+          if (!currentHeaders['Referer']) {
+            currentHeaders['Referer'] = 'https://www.indihometv.com/';
+          }
+          if (!currentHeaders['User-Agent']) {
+            currentHeaders['User-Agent'] = 'Mozilla';
+          }
+        }
+
         // Clean user-agent in case it has spaces from source
         if (currentHeaders['User-Agent'] && currentHeaders['User-Agent'].includes(' ')) {
           currentHeaders['User-Agent'] = 'Mozilla';
@@ -637,6 +804,8 @@ async function main() {
 
   // Prepend core Indonesian channels first
   allChannels.push(...CORE_INDONESIA_CHANNELS);
+  // Prepend core Sports channels
+  allChannels.push(...CORE_SPORTS_CHANNELS);
 
   for (const source of SOURCES) {
     try {
@@ -683,8 +852,8 @@ async function main() {
   let checkedCount = 0;
 
   await runWithConcurrency(uniqueChannels, 15, async (ch) => {
-    // Bypass online check for Indonesian and Korean channels because they are geo-blocked on US/EU runners but work for domestic users
-    const isOnline = (ch.group.startsWith('Indonesia') || ch.group === 'Korea') ? true : await checkStreamOnline(ch.url, ch.headers);
+    // Bypass online check for Indonesian, Korean and Olahraga channels because they are geo-blocked on US/EU runners but work for domestic users
+    const isOnline = (ch.group.startsWith('Indonesia') || ch.group === 'Korea' || ch.group === 'Olahraga') ? true : await checkStreamOnline(ch.url, ch.headers);
     checkedCount++;
     if (checkedCount % 20 === 0 || checkedCount === uniqueChannels.length) {
       console.log(`Progress: ${checkedCount}/${uniqueChannels.length} validated`);
