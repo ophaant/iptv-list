@@ -1125,8 +1125,7 @@ async function main() {
   let checkedCount = 0;
 
   await runWithConcurrency(uniqueChannels, 15, async (ch) => {
-    // Bypass online check for Indonesian, Korean and Olahraga channels because they are geo-blocked on US/EU runners but work for domestic users
-    const isOnline = (ch.group.startsWith('Indonesia') || ch.group === 'Korea' || ch.group === 'Olahraga') ? true : await checkStreamOnline(ch.url, ch.headers);
+    const isOnline = await checkStreamOnline(ch.url, ch.headers);
     checkedCount++;
     if (checkedCount % 20 === 0 || checkedCount === uniqueChannels.length) {
       console.log(`Progress: ${checkedCount}/${uniqueChannels.length} validated`);
