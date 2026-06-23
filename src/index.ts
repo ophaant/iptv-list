@@ -702,7 +702,24 @@ function shouldSkipHeadersInUrl(url: string): boolean {
 
 // Helper to normalize channel names to group duplicates
 function getCanonicalChannelName(name: string): string {
-  let normalized = name.toLowerCase();
+  let rawLower = name.toLowerCase();
+  
+  if (rawLower.includes('fifa world cup') && rawLower.includes('tvri sport') && rawLower.includes('1')) return 'fifaworldcuptvrisport1';
+  if (rawLower.includes('fifa world cup') && rawLower.includes('tvri sport') && rawLower.includes('2')) return 'fifaworldcuptvrisport2';
+  if (rawLower.includes('fifa world cup') && rawLower.includes('tvri sport') && rawLower.includes('3')) return 'fifaworldcuptvrisport3';
+  if (rawLower.includes('fifa world cup') && rawLower.includes('tvri nasional') && rawLower.includes('1')) return 'fifaworldcuptvrinasional1';
+  if (rawLower.includes('fifa world cup') && rawLower.includes('tvri nasional') && rawLower.includes('2')) return 'fifaworldcuptvrinasional2';
+  if (rawLower.includes('fifa world cup') && rawLower.includes('tvri nasional') && rawLower.includes('3')) return 'fifaworldcuptvrinasional3';
+  if (rawLower.includes('fifa matchday') && rawLower.includes('indosiar')) return 'fifamatchdayindosiar';
+  if (rawLower.includes('fifa matchday') && rawLower.includes('sctv')) return 'fifamatchdaysctv';
+  if (rawLower.includes('asean u19') && rawLower.includes('indosiar')) return 'aseanu19indosiar';
+  if (rawLower.includes('asean u19') && rawLower.includes('sctv')) return 'aseanu19sctv';
+  if ((rawLower.includes('bein sports indonesia') || rawLower.includes('bein sport indonesia')) && rawLower.includes('1')) return 'beinsportsindonesia1';
+  if (rawLower.includes('sky sports') || rawLower.includes('sky sport')) return 'skysports';
+  if (rawLower.includes('spotv') && rawLower.includes('vision')) return 'spotvvisionplus';
+  if (rawLower.includes('vision+ sports') || rawLower.includes('vision plus sports') || rawLower.includes('vision+ sport')) return 'visionplussports';
+
+  let normalized = rawLower;
   if (normalized.includes('vietnam') || normalized.includes('viet') || normalized.includes('vn') || normalized.includes('vtv')) {
     return 'non_indonesian_channel';
   }
@@ -855,6 +872,12 @@ function getStreamScore(ch: Channel): number {
   // Penalize bad cloudfront nodes (like d1abp075u76pbq which needs DASH/DRM)
   if (url.includes('d1abp075u76pbq.cloudfront.net')) {
     score -= 150;
+  }
+  
+  // Give a massive boost to "(Vidio)" sources for ANTV, TVOne, and SCTV as requested by the user
+  const canonical = getCanonicalChannelName(name);
+  if (name.includes('vidio') && (canonical === 'antv' || canonical === 'sctv' || canonical === 'tvone')) {
+    score += 1000;
   }
   
   return score;
