@@ -153,7 +153,7 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   {
     tvgId: 'RCTI.id',
     logo: CUSTOM_LOGOS['rcti'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'RCTI',
     url: 'https://allcutv.rctiplus.id/rcti2023.m3u8',
     headers: {
@@ -164,7 +164,7 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   {
     tvgId: 'MNCTV.id',
     logo: CUSTOM_LOGOS['mnctv'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'MNC TV',
     url: 'https://allcutv.rctiplus.id/mnctv2023.m3u8',
     headers: {
@@ -175,7 +175,7 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   {
     tvgId: 'GTV.id',
     logo: CUSTOM_LOGOS['gtv'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'GTV (Global TV)',
     url: 'https://allcutv.rctiplus.id/gtv2023.m3u8',
     headers: {
@@ -186,7 +186,7 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   {
     tvgId: 'iNews.id',
     logo: CUSTOM_LOGOS['inews'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'iNews',
     url: 'https://allcutv.rctiplus.id/inews2023.m3u8',
     headers: {
@@ -197,14 +197,14 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   {
     tvgId: 'ANTV.id',
     logo: CUSTOM_LOGOS['antv'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'ANTV',
     url: 'https://aspaltvpasti.top/Drmvidbos/Akun121/bosstv.m3u8?id=782'
   },
   {
     tvgId: 'Indosiar.id',
     logo: CUSTOM_LOGOS['indosiar'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'Indosiar',
     url: 'https://tvratu.my.id/vid/index.mpd?id=205&type=dash',
     headers: {
@@ -215,7 +215,7 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   {
     tvgId: 'SCTV.id',
     logo: CUSTOM_LOGOS['sctv'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'SCTV',
     url: 'https://d3b0v7fggu5zwm.cloudfront.net/out/v1/9e9aba7068ca4c7f8a73381bef5f8742/index.mpd',
     headers: {
@@ -227,7 +227,7 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   {
     tvgId: 'tvOne.id',
     logo: CUSTOM_LOGOS['tvone'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'tvOne',
     url: 'https://d3b0v7fggu5zwm.cloudfront.net/out/v1/f3df48faafaf4198a65b9763140fce30/index.mpd',
     headers: {
@@ -239,49 +239,49 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
   {
     tvgId: 'MDTV.id',
     logo: CUSTOM_LOGOS['mdtv'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'MDTV',
     url: 'https://op-group1-swiftservesd-1.dens.tv/h/h06/index.m3u8'
   },
   {
     tvgId: 'RTV.id',
     logo: CUSTOM_LOGOS['rtv'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'RTV',
     url: 'https://rtvstream.rtv.co.id:4555/hls/rtv.m3u8'
   },
   {
     tvgId: 'TransTV.id',
     logo: CUSTOM_LOGOS['transtv'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'Trans TV',
     url: 'https://video.detik.com/transtv/smil:transtv.smil/playlist.m3u8'
   },
   {
     tvgId: 'Trans7.id',
     logo: CUSTOM_LOGOS['trans7'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'Trans 7',
     url: 'https://video.detik.com/trans7/smil:trans7.smil/playlist.m3u8'
   },
   {
     tvgId: 'CNBCIndonesia.id',
     logo: CUSTOM_LOGOS['cnbc'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'CNBC Indonesia',
     url: 'https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/playlist.m3u8'
   },
   {
     tvgId: 'CNNIndonesia.id',
     logo: CUSTOM_LOGOS['cnn'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'CNN Indonesia',
     url: 'https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8'
   },
   {
     tvgId: 'Moji.id',
     logo: CUSTOM_LOGOS['moji'],
-    group: 'Indonesia (Populer)',
+    group: 'Indonesia (Lokal)',
     name: 'Moji',
     url: 'https://aspaltvpasti.top/Drmvidbos/Akun121/bosstv.m3u8?id=206'
   },
@@ -850,7 +850,7 @@ function getStreamScore(ch: Channel): number {
 // Helper to categorize popular Indonesian national TV channels
 function getIndonesianGroup(name: string): string {
   const popularRegex = /rcti|mnc\s*tv|gtv|global\s*tv|inews|sctv|indosiar|antv|trans\s*tv|trans\s*7|net\s*tv|net\.|tvone|metro\s*tv|kompas\s*tv|rtv|rajawali\s*tv|cnn\s*indonesia|cnbc\s*indonesia/i;
-  return popularRegex.test(name) ? 'Indonesia (Populer)' : 'Indonesia (Lokal)';
+  return 'Indonesia (Lokal)';
 }
 
 // Parser function for M3U content supporting headers
