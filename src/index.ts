@@ -115,53 +115,37 @@ const CUSTOM_LOGOS: { [key: string]: string } = {
   'sportstars2': 'https://upload.wikimedia.org/wikipedia/commons/d/d7/Sportstars_2.png',
   'sportstars3': 'https://upload.wikimedia.org/wikipedia/commons/a/a3/Sportstars_3.png',
   'sportstars4': 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png',
-  'championstv1': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/champions1.jpg?raw=true',
-  'championstv2': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/champions2.jpg?raw=true',
-  'championstv5': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/champions5.jpg?raw=true',
-  'championstv6': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/champions6.jpg?raw=true',
-  'tvrisport': 'https://raw.githubusercontent.com/mimipipi22/logo/blob/main/sports/tvrisport.jpg?raw=true',
+  'tvrisport': 'https://i.imgur.com/QMDLXBK.jpeg',
   'beinsportsxtra': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
   'beinsportsxtraespanol': 'https://i.imgur.com/V562tpO.png',
   'espn8theocho': 'https://images.fubo.tv/channel-config-ui/station-logos/on-dark/espn_8_the_ocho_bw.png',
   'tracesportstars': 'https://i.imgur.com/FabFP5A.png',
   'mojiproliga': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Moji_blue.svg/1024px-Moji_blue.svg.png',
-  'spotv': 'https://upload.wikimedia.org/wikipedia/commons/2/2f/SPOTV_logo.svg',
-  'spotv2': 'https://upload.wikimedia.org/wikipedia/commons/2/2f/SPOTV_logo.svg',
-  'beinsports1': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsports2': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsports3': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsports4': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsports5': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsports6': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsports7': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsports8': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsports9': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsportspremium1': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsportspremium2': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsportspremium3': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsportsenglish1': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsportsenglish2': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsportsmax1': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsportsmax2': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsportsmax3': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsportsmax4': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'beinsportsglobal': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png',
-  'daznlaliga1': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/LaLiga_logo.svg/512px-LaLiga_logo.svg.png',
-  'daznlaliga2': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/LaLiga_logo.svg/512px-LaLiga_logo.svg.png',
-  'movistarlaliga': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/LaLiga_logo.svg/512px-LaLiga_logo.svg.png',
-  'supersportlaliga': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/LaLiga_logo.svg/512px-LaLiga_logo.svg.png',
-  'hubpremier1': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png',
-  'hubpremier2': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png',
-  'hubpremier3': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png',
-  'hubpremier4': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png',
-  'hubpremier5': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Premier_League_Logo.svg/512px-Premier_League_Logo.svg.png',
-  'skysportspremierleague': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Sky_Sports_Logo.svg/512px-Sky_Sports_Logo.svg.png',
-  'skysportseriea': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Sky_Sports_Logo.svg/512px-Sky_Sports_Logo.svg.png',
-  'skysportbundesliga': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Sky_Sports_Logo.svg/512px-Sky_Sports_Logo.svg.png',
-  'espnnlpremium': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png',
-  'espn2': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png',
-  'espn3': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png',
-  'espn4': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png'
+  'fifaplus': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png',
+  'fubosports': 'https://i.imgur.com/qFNRJLb.png',
+  'mutv': 'https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb1834.png',
+  'fightnetwork': 'https://i.imgur.com/vlKPZHR.png',
+  'draftkings': 'https://i.imgur.com/SFYhgrt.png',
+  'ddsports': 'https://i.imgur.com/bPWFXkL.png',
+  'cazetv': 'https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Caz%C3%A9TV_logo.svg/1280px-Caz%C3%A9TV_logo.svg.png',
+  'morethansportstv': 'https://i.imgur.com/SLrjImc.png',
+  'cbsgolazo': 'https://i.imgur.com/eMjutHS.png',
+  'lequipe': 'https://i.imgur.com/t35zhM9.png',
+  'fite247': 'https://i.imgur.com/ESV6qgH.png',
+  'combateglobal': 'https://i.imgur.com/ZPYK5jr.png',
+  'spotv': 'https://warningfm.github.io/v3/img/zfcBrM4.png?v=1.0.0.1',
+  'spotv2': 'https://warningfm.github.io/v3/img/wDbt2cl.png?v=1.0.0.1',
+  'beinsports1': 'https://raw.githubusercontent.com/whs4030/Logo/refs/heads/main/Bein-MY1.png',
+  'beinsports2': 'https://raw.githubusercontent.com/whs4030/Logo/refs/heads/main/Bein-MY2.png',
+  'beinsports3': 'https://raw.githubusercontent.com/whs4030/Logo/refs/heads/main/Bein-MY3.png',
+  'daznlaliga1': 'https://raw.githubusercontent.com/whs4030/Logo/refs/heads/main/DaznLaliga1.png',
+  'daznlaliga2': 'https://raw.githubusercontent.com/whs4030/Logo/refs/heads/main/DaznLaliga2.png',
+  'movistarlaliga': 'https://raw.githubusercontent.com/whs4030/Logo/refs/heads/main/M%2BLaliga-picsay.png',
+  'skysportspremierleague': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Sky_Sports_Premier_League_logo_2020.svg/512px-Sky_Sports_Premier_League_logo_2020.svg.png',
+  'skysportseriea': 'https://seeklogo.com/images/S/sky-sport-serie-a-logo-68A36EAF5C-seeklogo.com.png',
+  'skysportbundesliga': 'https://seeklogo.com/images/S/sky-sport-bundesliga-logo-27807C2755-seeklogo.com.png',
+  'espnpremium': 'https://images.indihometv.com/images/channels/image_ch_espn.png',
+  'espn2': 'https://images.indihometv.com/images/channels/image_ch_espn2.png'
 };
 
 // Curated active Indonesian channels (MNC channels need referer, others play without headers)
@@ -415,35 +399,11 @@ const CORE_SPORTS_CHANNELS: Channel[] = [
     logo: CUSTOM_LOGOS['tvrisport'],
     group: 'Olahraga',
     name: 'TVRI Sport',
-    url: 'http://103.179.182.117:6768/hls/49/49.m3u8'
-  },
-  {
-    tvgId: 'ChampionsTV1.id',
-    logo: CUSTOM_LOGOS['championstv1'],
-    group: 'Olahraga',
-    name: 'Champions TV 1',
-    url: 'http://103.179.182.117:6768/hls/66/66.m3u8'
-  },
-  {
-    tvgId: 'ChampionsTV2.id',
-    logo: CUSTOM_LOGOS['championstv2'],
-    group: 'Olahraga',
-    name: 'Champions TV 2',
-    url: 'http://103.179.182.117:6768/hls/88/88.m3u8'
-  },
-  {
-    tvgId: 'ChampionsTV5.id',
-    logo: CUSTOM_LOGOS['championstv5'],
-    group: 'Olahraga',
-    name: 'Champions TV 5',
-    url: 'http://103.179.182.117:6768/hls/21/21.m3u8'
-  },
-  {
-    tvgId: 'ChampionsTV6.id',
-    logo: CUSTOM_LOGOS['championstv6'],
-    group: 'Olahraga',
-    name: 'Champions TV 6',
-    url: 'http://103.179.182.117:6768/hls/94/94.m3u8'
+    url: 'https://ott-balancer.tvri.go.id/live/eds/SportHD/hls/SportHD.m3u8',
+    headers: {
+      'Referer': 'https://tvri.go.id/',
+      'User-Agent': 'Mozilla'
+    }
   },
   {
     tvgId: 'SCTV.id',
@@ -515,263 +475,193 @@ const CORE_SPORTS_CHANNELS: Channel[] = [
     }
   },
   {
-    tvgId: 'SpoTV.kr',
-    logo: CUSTOM_LOGOS['spotv'],
+    tvgId: 'FIFAPlus.int',
+    logo: CUSTOM_LOGOS['fifaplus'],
     group: 'Olahraga',
-    name: 'SPOTV 1',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/165105'
+    name: 'FIFA+',
+    url: 'https://jmp2.uk/plu-660c29b5aec9680008f5b4a4.m3u8'
   },
   {
-    tvgId: 'SpoTV2.kr',
+    tvgId: 'FuboSportsNetwork.us',
+    logo: CUSTOM_LOGOS['fubosports'],
+    group: 'Olahraga',
+    name: 'fubo Sports Network',
+    url: 'https://dnf08l6u6uxnz.cloudfront.net/master.m3u8'
+  },
+  {
+    tvgId: 'MUTV.uk',
+    logo: CUSTOM_LOGOS['mutv'],
+    group: 'Olahraga',
+    name: 'MUTV',
+    url: 'https://bcovlive-a.akamaihd.net/r2d2c4ca5bf57456fb1d16255c1a535c8/eu-west-1/6058004203001/playlist.m3u8'
+  },
+  {
+    tvgId: 'FightNetwork.ca',
+    logo: CUSTOM_LOGOS['fightnetwork'],
+    group: 'Olahraga',
+    name: 'Fight Network',
+    url: 'https://d12a2vxqkkh1bo.cloudfront.net/hls/main.m3u8'
+  },
+  {
+    tvgId: 'DraftKingsNetwork.us',
+    logo: CUSTOM_LOGOS['draftkings'],
+    group: 'Olahraga',
+    name: 'DraftKings Network',
+    url: 'https://na.linear.zype.com/e0bd0e23-a958-4e43-8164-4f2fef8876a8/fd3614bd-90bf-4530-a277-65ae3a1720c8-zype/live.m3u8'
+  },
+  {
+    tvgId: 'DDSports.in',
+    logo: CUSTOM_LOGOS['ddsports'],
+    group: 'Olahraga',
+    name: 'DD Sports',
+    url: 'https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8'
+  },
+  {
+    tvgId: 'CazeTV.br',
+    logo: CUSTOM_LOGOS['cazetv'],
+    group: 'Olahraga',
+    name: 'CazeTV',
+    url: 'https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8'
+  },
+  {
+    tvgId: 'MoreThanSportsTV.de',
+    logo: CUSTOM_LOGOS['morethansportstv'],
+    group: 'Olahraga',
+    name: 'More Than Sports TV',
+    url: 'https://mts1.iptv-playoutcenter.de/mts/mts-web/playlist.m3u8'
+  },
+  {
+    tvgId: 'CBSSportsGolazo.us',
+    logo: CUSTOM_LOGOS['cbsgolazo'],
+    group: 'Olahraga',
+    name: 'CBS Sports Golazo',
+    url: 'https://proped3fhg87.airspace-cdn.cbsivideo.com/golazo-live-dai/master/golazo-live-dai.m3u8'
+  },
+  {
+    tvgId: 'LEquipe.fr',
+    logo: CUSTOM_LOGOS['lequipe'],
+    group: 'Olahraga',
+    name: "L'Equipe",
+    url: 'https://dshn8inoshngm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gac2i63dmu8b7/LEquipe_FR.m3u8'
+  },
+  {
+    tvgId: 'FITE247.us',
+    logo: CUSTOM_LOGOS['fite247'],
+    group: 'Olahraga',
+    name: 'FITE 24/7',
+    url: 'https://d3d85c7qkywguj.cloudfront.net/scheduler/scheduleMaster/263.m3u8'
+  },
+  {
+    tvgId: 'CombateGlobal.us',
+    logo: CUSTOM_LOGOS['combateglobal'],
+    group: 'Olahraga',
+    name: 'Combate Global',
+    url: 'https://stream.ads.ottera.tv/playlist.m3u8?network_id=960'
+  },
+  {
+    tvgId: 'SPOTV.id',
+    logo: CUSTOM_LOGOS['spotv'],
+    group: 'Olahraga',
+    name: 'SPOTV',
+    url: 'http://202.80.222.20/cdn/iptv/Tvod/001/channel2000160/1024.m3u8'
+  },
+  {
+    tvgId: 'SPOTV2.id',
     logo: CUSTOM_LOGOS['spotv2'],
     group: 'Olahraga',
     name: 'SPOTV 2',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/298506'
+    url: 'http://202.80.222.20/cdn/iptv/Tvod/001/channel2000138/1024.m3u8'
   },
   {
-    tvgId: 'beINSports1.fr',
+    tvgId: 'beINSports1.id',
     logo: CUSTOM_LOGOS['beinsports1'],
     group: 'Olahraga',
     name: 'beIN Sports 1',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/100'
+    url: 'https://wahyu1ptv.pages.dev/AstroBein1.m3u8'
   },
   {
-    tvgId: 'beINSports2.fr',
+    tvgId: 'beINSports2.id',
     logo: CUSTOM_LOGOS['beinsports2'],
     group: 'Olahraga',
     name: 'beIN Sports 2',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/101'
+    url: 'https://wahyu1ptv.pages.dev/AstroBein2.m3u8'
   },
   {
-    tvgId: 'beINSports3.fr',
+    tvgId: 'beINSports3.id',
     logo: CUSTOM_LOGOS['beinsports3'],
     group: 'Olahraga',
     name: 'beIN Sports 3',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/102'
+    url: 'https://wahyu1ptv.pages.dev/AstroBein3.m3u8'
   },
   {
-    tvgId: 'beINSports4.fr',
-    logo: CUSTOM_LOGOS['beinsports4'],
-    group: 'Olahraga',
-    name: 'beIN Sports 4',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/103'
-  },
-  {
-    tvgId: 'beINSports5.fr',
-    logo: CUSTOM_LOGOS['beinsports5'],
-    group: 'Olahraga',
-    name: 'beIN Sports 5',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/104'
-  },
-  {
-    tvgId: 'beINSports6.fr',
-    logo: CUSTOM_LOGOS['beinsports6'],
-    group: 'Olahraga',
-    name: 'beIN Sports 6',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/105'
-  },
-  {
-    tvgId: 'beINSports7.fr',
-    logo: CUSTOM_LOGOS['beinsports7'],
-    group: 'Olahraga',
-    name: 'beIN Sports 7',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/106'
-  },
-  {
-    tvgId: 'beINSports8.fr',
-    logo: CUSTOM_LOGOS['beinsports8'],
-    group: 'Olahraga',
-    name: 'beIN Sports 8',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/107'
-  },
-  {
-    tvgId: 'beINSports9.fr',
-    logo: CUSTOM_LOGOS['beinsports9'],
-    group: 'Olahraga',
-    name: 'beIN Sports 9',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/108'
-  },
-  {
-    tvgId: 'beINSportsPremium1.fr',
-    logo: CUSTOM_LOGOS['beinsportspremium1'],
-    group: 'Olahraga',
-    name: 'beIN Sports Premium 1',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/109'
-  },
-  {
-    tvgId: 'beINSportsPremium2.fr',
-    logo: CUSTOM_LOGOS['beinsportspremium2'],
-    group: 'Olahraga',
-    name: 'beIN Sports Premium 2',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/280145'
-  },
-  {
-    tvgId: 'beINSportsPremium3.fr',
-    logo: CUSTOM_LOGOS['beinsportspremium3'],
-    group: 'Olahraga',
-    name: 'beIN Sports Premium 3',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/280249'
-  },
-  {
-    tvgId: 'beINSportsEnglish1.fr',
-    logo: CUSTOM_LOGOS['beinsportsenglish1'],
-    group: 'Olahraga',
-    name: 'beIN Sports English 1',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/110'
-  },
-  {
-    tvgId: 'beINSportsEnglish2.fr',
-    logo: CUSTOM_LOGOS['beinsportsenglish2'],
-    group: 'Olahraga',
-    name: 'beIN Sports English 2',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/111'
-  },
-  {
-    tvgId: 'beINSportsMax1.fr',
-    logo: CUSTOM_LOGOS['beinsportsmax1'],
-    group: 'Olahraga',
-    name: 'beIN Sports Max 1',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/296991'
-  },
-  {
-    tvgId: 'beINSportsMax2.fr',
-    logo: CUSTOM_LOGOS['beinsportsmax2'],
-    group: 'Olahraga',
-    name: 'beIN Sports Max 2',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/199001'
-  },
-  {
-    tvgId: 'beINSportsMax3.fr',
-    logo: CUSTOM_LOGOS['beinsportsmax3'],
-    group: 'Olahraga',
-    name: 'beIN Sports Max 3',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/296992'
-  },
-  {
-    tvgId: 'beINSportsMax4.fr',
-    logo: CUSTOM_LOGOS['beinsportsmax4'],
-    group: 'Olahraga',
-    name: 'beIN Sports Max 4',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/13813'
-  },
-  {
-    tvgId: 'beINSportsGlobal.fr',
-    logo: CUSTOM_LOGOS['beinsportsglobal'],
-    group: 'Olahraga',
-    name: 'beIN Sports Global',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/16779'
-  },
-  {
-    tvgId: 'DAZNLaLiga1.es',
+    tvgId: 'DAZNLaliga1.id',
     logo: CUSTOM_LOGOS['daznlaliga1'],
     group: 'Olahraga',
     name: 'DAZN LaLiga 1',
     url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/297787'
   },
   {
-    tvgId: 'DAZNLaLiga2.es',
+    tvgId: 'DAZNLaliga2.id',
     logo: CUSTOM_LOGOS['daznlaliga2'],
     group: 'Olahraga',
     name: 'DAZN LaLiga 2',
     url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/298745'
   },
   {
-    tvgId: 'MovistarLaLiga.es',
+    tvgId: 'MovistarLaliga.id',
     logo: CUSTOM_LOGOS['movistarlaliga'],
     group: 'Olahraga',
     name: 'Movistar LaLiga',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/1141'
+    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/302296'
   },
   {
-    tvgId: 'SuperSportLaLiga.za',
-    logo: CUSTOM_LOGOS['supersportlaliga'],
-    group: 'Olahraga',
-    name: 'SuperSport LaLiga',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/194358'
-  },
-  {
-    tvgId: 'HubPremier1.sg',
-    logo: CUSTOM_LOGOS['hubpremier1'],
-    group: 'Olahraga',
-    name: 'Hub Premier 1',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/305270'
-  },
-  {
-    tvgId: 'HubPremier2.sg',
-    logo: CUSTOM_LOGOS['hubpremier2'],
-    group: 'Olahraga',
-    name: 'Hub Premier 2',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/305271'
-  },
-  {
-    tvgId: 'HubPremier3.sg',
-    logo: CUSTOM_LOGOS['hubpremier3'],
-    group: 'Olahraga',
-    name: 'Hub Premier 3',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/305272'
-  },
-  {
-    tvgId: 'HubPremier4.sg',
-    logo: CUSTOM_LOGOS['hubpremier4'],
-    group: 'Olahraga',
-    name: 'Hub Premier 4',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/305273'
-  },
-  {
-    tvgId: 'HubPremier5.sg',
-    logo: CUSTOM_LOGOS['hubpremier5'],
-    group: 'Olahraga',
-    name: 'Hub Premier 5',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/305274'
-  },
-  {
-    tvgId: 'SkySportsPremierLeague.uk',
+    tvgId: 'SkySportsPremierLeague.id',
     logo: CUSTOM_LOGOS['skysportspremierleague'],
     group: 'Olahraga',
     name: 'Sky Sports Premier League',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/263'
+    url: 'https://nijineh-lalajo.hf.space/watch/aHR0cHM6Ly9kb2trbzFuZXcubmV3a3NvLnJ1L2Rva2tvMS9wcmVtaXVtMTMwL21vbm8ubTN1OA==.m3u8'
   },
   {
-    tvgId: 'SkySportSerieA.it',
+    tvgId: 'CanalPlusPremierLeague.id',
+    logo: CUSTOM_LOGOS['skysportspremierleague'],
+    group: 'Olahraga',
+    name: 'CANAL+ Premier League',
+    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/286794'
+  },
+  {
+    tvgId: 'SkySportSerieA.id',
     logo: CUSTOM_LOGOS['skysportseriea'],
     group: 'Olahraga',
     name: 'Sky Sport Serie A',
     url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/2546'
   },
   {
-    tvgId: 'SkySportBundesliga.de',
+    tvgId: 'SkySportBundesliga1.id',
     logo: CUSTOM_LOGOS['skysportbundesliga'],
     group: 'Olahraga',
-    name: 'Sky Sport Bundesliga',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/2431'
+    name: 'Sky Sport Bundesliga 1',
+    url: 'https://wahyu1ptv.pages.dev/SkySportBundesliga1-HD.m3u8'
   },
   {
-    tvgId: 'ESPNPremium.nl',
-    logo: CUSTOM_LOGOS['espnnlpremium'],
+    tvgId: 'SkySportBundesliga2.id',
+    logo: CUSTOM_LOGOS['skysportbundesliga'],
     group: 'Olahraga',
-    name: 'ESPN NL Premium',
+    name: 'Sky Sport Bundesliga 2',
+    url: 'https://wahyu1ptv.pages.dev/SkySportBundesliga2-HD.m3u8'
+  },
+  {
+    tvgId: 'ESPNPremium.id',
+    logo: CUSTOM_LOGOS['espnpremium'],
+    group: 'Olahraga',
+    name: 'ESPN Premium',
     url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/298158'
   },
   {
-    tvgId: 'ESPN2.nl',
+    tvgId: 'ESPN2.id',
     logo: CUSTOM_LOGOS['espn2'],
     group: 'Olahraga',
-    name: 'ESPN 2 NL',
+    name: 'ESPN 2',
     url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/35326'
-  },
-  {
-    tvgId: 'ESPN3.nl',
-    logo: CUSTOM_LOGOS['espn3'],
-    group: 'Olahraga',
-    name: 'ESPN 3 NL',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/61170'
-  },
-  {
-    tvgId: 'ESPN4.nl',
-    logo: CUSTOM_LOGOS['espn4'],
-    group: 'Olahraga',
-    name: 'ESPN 4 NL',
-    url: 'http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/299345'
   }
 ];
 
@@ -793,7 +683,10 @@ function shouldSkipHeadersInUrl(url: string): boolean {
     lowerUrl.includes('metrotvnews.com') ||
     lowerUrl.includes('210.210.155.') ||
     lowerUrl.includes('45.126.83.') ||
-    lowerUrl.includes('203.77.246.')
+    lowerUrl.includes('203.77.246.') ||
+    lowerUrl.includes('wahyu1ptv.pages.dev') ||
+    lowerUrl.includes('hf.space') ||
+    lowerUrl.includes('202.80.222.20')
   );
 }
 
@@ -859,10 +752,6 @@ function getCanonicalChannelName(name: string): string {
   if (normalized === 'sportstars2') return 'sportstars2';
   if (normalized === 'sportstars3') return 'sportstars3';
   if (normalized === 'sportstars4') return 'sportstars4';
-  if (normalized === 'championstv1' || normalized === 'champions1' || normalized === 'champion1') return 'championstv1';
-  if (normalized === 'championstv2' || normalized === 'champions2' || normalized === 'champion2') return 'championstv2';
-  if (normalized === 'championstv5' || normalized === 'champions5' || normalized === 'champion5') return 'championstv5';
-  if (normalized === 'championstv6' || normalized === 'champions6' || normalized === 'champion6') return 'championstv6';
   if (normalized === 'tvrisport' || normalized === 'tvrisports') return 'tvrisport';
   if (normalized === 'sctvsports') return 'sctvsports';
   if (normalized === 'indosiarsports') return 'indosiarsports';
@@ -872,56 +761,44 @@ function getCanonicalChannelName(name: string): string {
   if (normalized === 'espn8theocho' || normalized === 'espn8') return 'espn8theocho';
   if (normalized === 'tracesportstars' || normalized === 'tracesport') return 'tracesportstars';
   if (normalized === 'mojiproliga') return 'mojiproliga';
+  if (normalized === 'fifaplus' || normalized === 'fifa') return 'fifaplus';
+  if (normalized === 'fubosports' || normalized === 'fubo') return 'fubosports';
+  if (normalized === 'mutv') return 'mutv';
+  if (normalized === 'fightnetwork') return 'fightnetwork';
+  if (normalized === 'draftkings') return 'draftkings';
+  if (normalized === 'ddsports') return 'ddsports';
+  if (normalized === 'cazetv') return 'cazetv';
+  if (normalized === 'morethansportstv') return 'morethansportstv';
+  if (normalized === 'cbsgolazo' || normalized.includes('golazo')) return 'cbsgolazo';
+  if (normalized === 'lequipe') return 'lequipe';
+  if (normalized === 'fite247' || normalized === 'fite') return 'fite247';
+  if (normalized === 'combateglobal' || normalized.includes('combate')) return 'combateglobal';
   
-  if (normalized.includes('spotv2') || normalized.includes('spotvch2')) return 'spotv2';
-  if (normalized.includes('spotv') || normalized.includes('spotvch1')) return 'spotv';
-  if (normalized.includes('beinsport1') || normalized.includes('beinsports1')) {
-    if (normalized.includes('premium')) return 'beinsportspremium1';
-    if (normalized.includes('english')) return 'beinsportsenglish1';
-    if (normalized.includes('max')) return 'beinsportsmax1';
-    return 'beinsports1';
-  }
-  if (normalized.includes('beinsport2') || normalized.includes('beinsports2')) {
-    if (normalized.includes('premium')) return 'beinsportspremium2';
-    if (normalized.includes('english')) return 'beinsportsenglish2';
-    if (normalized.includes('max')) return 'beinsportsmax2';
-    return 'beinsports2';
-  }
-  if (normalized.includes('beinsport3') || normalized.includes('beinsports3')) {
-    if (normalized.includes('premium')) return 'beinsportspremium3';
-    if (normalized.includes('max')) return 'beinsportsmax3';
-    return 'beinsports3';
-  }
-  if (normalized.includes('beinsport4') || normalized.includes('beinsports4')) {
-    if (normalized.includes('max')) return 'beinsportsmax4';
-    return 'beinsports4';
-  }
-  if (normalized.includes('beinsport5') || normalized.includes('beinsports5')) return 'beinsports5';
-  if (normalized.includes('beinsport6') || normalized.includes('beinsports6')) return 'beinsports6';
-  if (normalized.includes('beinsport7') || normalized.includes('beinsports7')) return 'beinsports7';
-  if (normalized.includes('beinsport8') || normalized.includes('beinsports8')) return 'beinsports8';
-  if (normalized.includes('beinsport9') || normalized.includes('beinsports9')) return 'beinsports9';
-  if (normalized.includes('beinsportsglobal') || normalized.includes('beinsportglobal') || normalized === 'beinsports') return 'beinsportsglobal';
+  if (normalized === 'spotv') return 'spotv';
+  if (normalized === 'spotv2') return 'spotv2';
+  if (normalized === 'beinsports1' || normalized === 'beinsport1') return 'beinsports1';
+  if (normalized === 'beinsports2' || normalized === 'beinsport2') return 'beinsports2';
+  if (normalized === 'beinsports3' || normalized === 'beinsport3') return 'beinsports3';
+  if (normalized === 'daznlaliga1' || normalized === 'daznlaliga1hd') return 'daznlaliga1';
+  if (normalized === 'daznlaliga2' || normalized === 'daznlaliga2hd') return 'daznlaliga2';
+  if (normalized === 'movistarlaliga' || normalized === 'mlaliga' || normalized === 'skysportslaliga') return 'movistarlaliga';
+  if (normalized === 'skysportspremierleague' || normalized === 'skysportpremierleague' || normalized === 'premierleague') return 'skysportspremierleague';
+  if (normalized === 'canalpluspremierleague' || normalized === 'canalpremierleague') return 'skysportspremierleague';
+  if (normalized === 'skysportseriea' || normalized === 'skysportsseriea') return 'skysportseriea';
+  if (normalized === 'skysportbundesliga' || normalized === 'skysportbundesliga1' || normalized === 'skysportbundesliga2' || normalized === 'skybundesliga') return 'skysportbundesliga';
+  if (normalized === 'espnpremium' || normalized === 'espnpremiuml') return 'espnpremium';
+  if (normalized === 'espn2') return 'espn2';
   
-  if (normalized.includes('daznlaliga1')) return 'daznlaliga1';
-  if (normalized.includes('daznlaliga2')) return 'daznlaliga2';
-  if (normalized.includes('movistarlaliga') || normalized === 'mlaliga') return 'movistarlaliga';
-  if (normalized.includes('supersportlaliga') || normalized === 'sslaliga') return 'supersportlaliga';
-  
-  if (normalized.includes('hubpremier1')) return 'hubpremier1';
-  if (normalized.includes('hubpremier2')) return 'hubpremier2';
-  if (normalized.includes('hubpremier3')) return 'hubpremier3';
-  if (normalized.includes('hubpremier4')) return 'hubpremier4';
-  if (normalized.includes('hubpremier5')) return 'hubpremier5';
-  if (normalized.includes('skysportspremierleague') || normalized.includes('skysportpremierleague')) return 'skysportspremierleague';
-  
-  if (normalized.includes('skysportseriea')) return 'skysportseriea';
-  if (normalized.includes('skysportbundesliga') || normalized.includes('skybundesliga')) return 'skysportbundesliga';
-  
-  if (normalized.includes('espnpremium') || normalized.includes('espnnlpremium')) return 'espnnlpremium';
-  if (normalized.includes('espn2')) return 'espn2';
-  if (normalized.includes('espn3')) return 'espn3';
-  if (normalized.includes('espn4')) return 'espn4';
+  if (normalized.includes('fifaplus') || normalized.includes('fifa+')) return 'fifaplus';
+  if (normalized.includes('fubosports')) return 'fubosports';
+  if (normalized.includes('fightnetwork')) return 'fightnetwork';
+  if (normalized.includes('draftkings')) return 'draftkings';
+  if (normalized.includes('ddsports')) return 'ddsports';
+  if (normalized.includes('cazetv')) return 'cazetv';
+  if (normalized.includes('morethansports')) return 'morethansportstv';
+  if (normalized.includes('lequipe')) return 'lequipe';
+  if (normalized.includes('fite247')) return 'fite247';
+  if (normalized.includes('combateglobal')) return 'combateglobal';
   
   return normalized;
 }
