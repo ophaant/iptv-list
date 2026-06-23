@@ -693,6 +693,9 @@ function shouldSkipHeadersInUrl(url: string): boolean {
 // Helper to normalize channel names to group duplicates
 function getCanonicalChannelName(name: string): string {
   let normalized = name.toLowerCase();
+  if (normalized.includes('vietnam') || normalized.includes('viet') || normalized.includes('vn') || normalized.includes('vtv')) {
+    return 'non_indonesian_channel';
+  }
   
   // Remove common suffixes/prefixes
   normalized = normalized.replace(/\[geo-blocked\]/gi, '');
