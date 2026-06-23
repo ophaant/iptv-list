@@ -199,7 +199,12 @@ const CORE_INDONESIA_CHANNELS: Channel[] = [
     logo: CUSTOM_LOGOS['antv'],
     group: 'Indonesia (Lokal)',
     name: 'ANTV',
-    url: 'https://aspaltvpasti.top/Drmvidbos/Akun121/bosstv.m3u8?id=782'
+    url: 'https://d84q7nw4qf3j3.cloudfront.net/out/v1/0a6c6b1534444ab4bd903af8761e6747/index.mpd',
+    headers: {
+      'Referer': 'https://www.visionplus.id/',
+      'User-Agent': 'Mozilla'
+    },
+    drmKey: '251c384e846841abafa1f7c723d57e66:e45b06a38cd261b74c5160f0912c042f'
   },
   {
     tvgId: 'Indosiar.id',
@@ -1099,27 +1104,32 @@ async function main() {
 
   console.log(`Total channels collected for validation: ${allChannels.length}`);
   
-  // De-duplicate channels globally by group and canonical name to keep only the single best stream per channel
-  const bestChannelsMap = new Map<string, Channel>();
+  // Group all channels by canonical name
+  const groupedChannelsMap = new Map<string, Channel[]>();
   for (const ch of allChannels) {
     const canonicalName = getCanonicalChannelName(ch.name);
     if (!canonicalName) continue;
     
-    // De-duplicate Indonesian popular and local together (preferring popular)
     const globalKey = ch.group.startsWith('Indonesia') ? `Indonesia:${canonicalName}` : `${ch.group}:${canonicalName}`;
-    const existing = bestChannelsMap.get(globalKey);
     
-    if (!existing) {
-      bestChannelsMap.set(globalKey, ch);
-    } else {
-      if (getStreamScore(ch) > getStreamScore(existing)) {
-        bestChannelsMap.set(globalKey, ch);
-      }
+    if (!groupedChannelsMap.has(globalKey)) {
+      groupedChannelsMap.set(globalKey, []);
+    }
+    
+    // prevent exact URL duplicates
+    const groupList = groupedChannelsMap.get(globalKey)!;
+    if (!groupList.some(existing => existing.url === ch.url)) {
+      groupList.push(ch);
     }
   }
   
-  const uniqueChannels = Array.from(bestChannelsMap.values());
-  console.log(`Deduplicated to ${uniqueChannels.length} candidate channels`);
+  const uniqueChannels: Channel[] = [];
+  for (const groupList of groupedChannelsMap.values()) {
+    // Sort sources for the same channel by score descending
+    groupList.sort((a, b) => getStreamScore(b) - getStreamScore(a));
+    uniqueChannels.push(...groupList);
+  }
+  console.log(`Deduplicated and grouped to ${uniqueChannels.length} candidate channels`);
 
   console.log('Validating streams (this might take a few minutes)...');
   
