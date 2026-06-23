@@ -14,6 +14,11 @@ interface Channel {
 
 const SOURCES = [
   {
+    url: 'https://raw.githubusercontent.com/rosdiyanto/iptv/main/Play.m3u',
+    groupName: 'Indonesia',
+    filter: (ch: Channel) => true,
+  },
+  {
     url: 'https://mgi24.github.io/tvdigital/idwork.m3u',
     groupName: 'Indonesia',
     filter: (ch: Channel) => true,
@@ -884,10 +889,17 @@ function parseM3U(content: string, defaultGroup: string): Channel[] {
       // Clean name: remove geoblocked indicator if we're injecting referrer
       name = name.replace(/\[Geo-blocked\]/gi, '').replace(/\s+/g, ' ').trim();
 
-      // Dynamically group Indonesian channels into Populer or Lokal
+      // Dynamically group channels based on M3U group-title or defaultGroup
+      let rawSourceGroup = groupMatch ? groupMatch[1] : '';
+      let sourceGroup = rawSourceGroup.toLowerCase();
       let group = defaultGroup;
-      if (group === 'Indonesia') {
+      
+      if (sourceGroup.includes('sport') || sourceGroup.includes('bola') || defaultGroup === 'Olahraga') {
+        group = 'Olahraga';
+      } else if (defaultGroup === 'Indonesia' || sourceGroup.includes('indonesia')) {
         group = getIndonesianGroup(name);
+      } else if (rawSourceGroup) {
+        group = rawSourceGroup;
       }
 
       currentInfo = {
