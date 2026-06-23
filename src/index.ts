@@ -1018,7 +1018,7 @@ async function checkStreamOnline(url: string, chHeaders?: { [key: string]: strin
   try {
     const response = await axios.head(url, {
       headers,
-      timeout: 3000,
+      timeout: 8000,
       validateStatus: () => true,
     });
     if (response.status >= 200 && response.status < 400) {
@@ -1031,7 +1031,7 @@ async function checkStreamOnline(url: string, chHeaders?: { [key: string]: strin
   try {
     const response = await axios.get(url, {
       headers,
-      timeout: 3000,
+      timeout: 8000,
       responseType: 'stream',
       validateStatus: () => true,
     });
